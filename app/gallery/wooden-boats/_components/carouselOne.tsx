@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ImageInfo {
   src: string;
@@ -20,7 +21,7 @@ const CarouselOne = (): JSX.Element => {
     {
       src: "/slika1.webp",
       date: "May 2023",
-      name: "Gajeta",
+      name: "gajeta",
       price: "On request",
       width: 364,
       height: 210,
@@ -28,7 +29,7 @@ const CarouselOne = (): JSX.Element => {
     {
       src: "/slika2.webp",
       date: "September 2021",
-      name: "Latisnko idro",
+      name: "latisnko idro",
       price: "On request",
       width: 820,
       height: 400,
@@ -36,7 +37,7 @@ const CarouselOne = (): JSX.Element => {
     {
       src: "/slika3.webp",
       date: "October 2021",
-      name: "Artijja",
+      name: "artijja",
       price: "On request",
       width: 350,
       height: 200,
@@ -113,15 +114,23 @@ const CarouselOne = (): JSX.Element => {
                           <X className="w-5 h-5" />
                         </Button>
                       </div>
-                      <div className="mx-0 lg:mx-0 w-full">
-                        <p className="mb-2 w-full lg:mb-1">
+                      <div className="mx-0 lg:mx-0 w-full 2xl:w-96 font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
                           Name: <strong>{imageInfo.name}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
                           Date: <strong>{imageInfo.date}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
                           Price: <strong>{imageInfo.price}</strong>
+                        </p>
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                          Mail:{" "}
+                          <strong>
+                            <Link href="mailto:edo.opanovic@gmail.com">
+                              edo.opanovic@gmail.com
+                            </Link>
+                          </strong>
                         </p>
                       </div>
                     </div>

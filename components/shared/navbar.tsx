@@ -30,11 +30,15 @@ const Navbar: React.FC = () => {
   return (
     <header className="bg-black text-white flex items-center justify-between w-full px-4 md:px-8 md:py-2 z-100">
       <div className="flex items-center justify-center max-sm:p-2 max-md:p-2">
-        <Image src="/logo.png" alt="logo" width={40} height={40} />
-        <div className="flex items-center justify-center flex-col ml-4 font-light">
-          <p className="text-2xl">Fine Art Of Dalmatia</p>
-          <p className="text-lg uppercase">Digital Art</p>
-        </div>
+        <Link href="/">
+          <Image src="/logo.png" alt="logo" width={40} height={40} />
+        </Link>
+        <Link href="/">
+          <div className="flex items-center justify-center flex-col ml-4 font-light">
+            <p className="text-2xl">Fine Art Of Dalmatia</p>
+            <p className="text-lg uppercase">Digital Art</p>
+          </div>
+        </Link>
       </div>
 
       {/* Mobile Menu Icon */}
@@ -107,7 +111,7 @@ const Navbar: React.FC = () => {
                 </Button>
               </Link>
               {link.subLinks && showGalleryOptions && (
-                <div className="mt-1 flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
+                <div className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
                   {link.subLinks.map((subLink, subIndex) => (
                     <Link key={subIndex} href={subLink.route}>
                       <Button size="subNav" variant="ghost">

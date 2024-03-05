@@ -24,6 +24,14 @@ const Contact = (): JSX.Element => {
             alt="Traka"
             className="mx-auto w-[30%] md:w-[14%]"
           />
+
+          <Image
+            src="/slika1.webp"
+            alt="Slika1"
+            width={200}
+            height={100}
+            className="mt-2"
+          />
         </div>
 
         <section className="bg-black flex items-center justify-between flex-col md:flex-row">
@@ -35,7 +43,7 @@ const Contact = (): JSX.Element => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="border-none mt-10 max-w-full md:ml-8"
+              className="border-none mt-10 max-w-full md:ml-8 2xl:w-[750px] 2xl:h-[450px] 2xl:mt-0"
             ></iframe>
           </div>
           <div className="md:w-1/2 md:ml-8 z-10">
@@ -67,8 +75,14 @@ const Contact = (): JSX.Element => {
             </div>
           </div>
         </section>
-        <div className="ml-8 absolute top-14 left-2/4 z-0 hidden md:block">
-          <Image src="/karta.png" alt="Karta" width={750} height={450} />
+        <div className="ml-8 absolute top-96 left-[45%] z-0 hidden md:block lg:fixed">
+          <Image
+            src="/karta.png"
+            alt="Karta"
+            width={750}
+            height={450}
+            className=" border-none mt-10 max-w-full md:ml-8 2xl:w-[850px] 2xl:h-[750px] 2xl:mt-0 object-cover"
+          />
         </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ImageInfo {
   src: string;
@@ -11,35 +12,43 @@ interface ImageInfo {
   price: string;
   width: number;
   height: number;
+  xl: {
+    width: number;
+    height: number;
+  };
 }
 
 const CarouselFour = (): JSX.Element => {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const imageInfoArray: ImageInfo[] = [
     {
       src: "/13.jpg",
       date: "October 2023",
-      name: "Život je lijep",
+      name: "život je lijep",
       price: "On request",
       width: 500,
       height: 280,
+      xl: { width: 1000, height: 600 },
     },
     {
       src: "/14.webp",
       date: "February 2022",
-      name: "Bonaca",
+      name: "bonaca",
       price: "On request",
       width: 430,
       height: 300,
+      xl: { width: 900, height: 600 },
     },
     {
       src: "/15.webp",
       date: "April 2023",
-      name: "Pred neveru",
+      name: "pred neveru",
       price: "On request",
       width: 500,
       height: 200,
+      xl: { width: 950, height: 600 },
     },
   ];
 
@@ -51,12 +60,28 @@ const CarouselFour = (): JSX.Element => {
     setFullscreenImage(null);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Postavi početnu vrijednost za širinu ekrana
+    setWindowWidth(window.innerWidth);
+
+    // Dodaj slušač za promjenu veličine ekrana
+    window.addEventListener("resize", handleResize);
+
+    // Ukloni slušač kada komponenta prestane biti montirana
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="relative lg:fixed">
       <img
         src="/podloga1.webp"
         alt="Podloga"
-        className="object-cover w-full lg:block hidden"
+        className="object-contain w-full lg:block hidden"
         height={720}
         width={1920}
       />
@@ -66,16 +91,26 @@ const CarouselFour = (): JSX.Element => {
             key={index}
             className={`relative ${
               index === 0 || index === imageInfoArray.length - 1
-                ? "py-11 lg:py-20"
+                ? "py-11 2xl:py-24"
                 : "pl-0"
             }`}
           >
             <Image
               src={imageInfo.src}
               alt={`Slika ${index + 1}`}
-              width={imageInfo.width}
-              height={imageInfo.height}
-              className="object-cover cursor-pointer drop-shadow-2xl shadow-black"
+              width={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.width
+                  : imageInfo.width
+              }
+              height={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.height
+                  : imageInfo.height
+              }
+              className={
+                "object-cover cursor-pointer drop-shadow-2xl shadow-black"
+              }
               onClick={() => openFullscreen(imageInfo.src)}
               onContextMenu={(e) => e.preventDefault()}
             />
@@ -113,15 +148,23 @@ const CarouselFour = (): JSX.Element => {
                           <X className="w-5 h-5" />
                         </Button>
                       </div>
-                      <div className="mx-0 lg:mx-0 w-full">
-                        <p className="mb-2 w-full lg:mb-1">
+                      <div className="mx-0 lg:mx-0 w-full 2xl:w-96 font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
                           Name: <strong>{imageInfo.name}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
                           Date: <strong>{imageInfo.date}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
                           Price: <strong>{imageInfo.price}</strong>
+                        </p>
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                          Mail:{" "}
+                          <strong>
+                            <Link href="mailto:edo.opanovic@gmail.com">
+                              edo.opanovic@gmail.com
+                            </Link>
+                          </strong>
                         </p>
                       </div>
                     </div>

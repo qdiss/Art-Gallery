@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <div className="w-full">
+      <div className="w-full h-full">
         <Transition
           show={activeCarousel === "hero"}
           enter="transition-opacity duration-1000"

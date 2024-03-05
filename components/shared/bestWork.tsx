@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const BestWork = () => {
   return (
-    <div className="flex flex-col bg-black w-full h-full">
+    <div className="flex flex-col bg-black w-full h-full lg:w-screen">
       <div>
         <Navbar />
 
         {/* CITAVA KOMPONENTA */}
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:fixed">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:fixed lg:w-screen">
           {/* LEVA STRANA */}
           <div className="w-full lg:w-1/3 flex items-center ml-6 my-9">
             <Image
@@ -33,7 +33,7 @@ const BestWork = () => {
                   alt="traka"
                   width={250}
                   height={100}
-                  className="flex items-center justify-center lg:w-[350px] lg:h-[100px] mt-2"
+                  className="flex items-center justify-center mt-2 lg:mb-4"
                 />
               </div>
               {/* PRVI RED */}

@@ -1,8 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ImageInfo {
   src: string;
@@ -11,35 +12,43 @@ interface ImageInfo {
   price: string;
   width: number;
   height: number;
+  xl: {
+    width: number;
+    height: number;
+  };
 }
 
 const OtherCarouselOne = (): JSX.Element => {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const imageInfoArray: ImageInfo[] = [
     {
       src: "/18.webp",
       date: "August 2023",
-      name: "Skale",
+      name: "skale",
       price: "On request",
       width: 380,
       height: 330,
+      xl: { width: 600, height: 400 },
     },
     {
       src: "/16.webp",
       date: "June 2023",
-      name: "Misto",
+      name: "misto",
       price: "On request",
       width: 640,
       height: 330,
+      xl: { width: 1000, height: 400 },
     },
     {
       src: "/17.webp",
       date: "March 2022",
-      name: "Škure",
+      name: "škure",
       price: "On request",
       width: 410,
       height: 250,
+      xl: { width: 650, height: 350 },
     },
   ];
 
@@ -50,6 +59,23 @@ const OtherCarouselOne = (): JSX.Element => {
   const closeFullscreen = () => {
     setFullscreenImage(null);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Postavi početnu vrijednost za širinu ekrana
+    setWindowWidth(window.innerWidth);
+
+    // Dodaj slušač za promjenu veličine ekrana
+    window.addEventListener("resize", handleResize);
+
+    // Ukloni slušač kada komponenta prestane biti montirana
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="relative lg:fixed">
@@ -66,16 +92,26 @@ const OtherCarouselOne = (): JSX.Element => {
             key={index}
             className={`relative ${
               index === 0 || index === imageInfoArray.length - 1
-                ? "py-11"
+                ? "py-11 lg:py-16"
                 : "pl-0"
             }`}
           >
             <Image
               src={imageInfo.src}
               alt={`Slika ${index + 1}`}
-              width={imageInfo.width}
-              height={imageInfo.height}
-              className="object-cover cursor-pointer drop-shadow-2xl shadow-black"
+              width={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.width
+                  : imageInfo.width
+              }
+              height={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.height
+                  : imageInfo.height
+              }
+              className={
+                "object-cover cursor-pointer drop-shadow-2xl shadow-black 2xl"
+              }
               onClick={() => openFullscreen(imageInfo.src)}
               onContextMenu={(e) => e.preventDefault()}
             />
@@ -113,15 +149,23 @@ const OtherCarouselOne = (): JSX.Element => {
                           <X className="w-5 h-5" />
                         </Button>
                       </div>
-                      <div className="mx-0 lg:mx-0 w-full">
-                        <p className="mb-2 w-full lg:mb-1">
+                      <div className="mx-0 lg:mx-0 w-full 2xl:w-96 font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
                           Name: <strong>{imageInfo.name}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
                           Date: <strong>{imageInfo.date}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
                           Price: <strong>{imageInfo.price}</strong>
+                        </p>
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                          Mail:{" "}
+                          <strong>
+                            <Link href="mailto:edo.opanovic@gmail.com">
+                              edo.opanovic@gmail.com
+                            </Link>
+                          </strong>
                         </p>
                       </div>
                     </div>

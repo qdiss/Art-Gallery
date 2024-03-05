@@ -31,7 +31,7 @@ const Hero = () => {
     setShowGalleryOptions(false);
   };
   return (
-    <div className="relative font-extralight lg:fixed">
+    <div className="relative font-extralight lg:fixed lg:w-screen">
       <div className="absolute top-0 left-0 ml-10 mt-2 z-10 pt-2 flex flex-row">
         <Image
           src="/homeLogo.png"
@@ -132,7 +132,7 @@ const Hero = () => {
         alt="Full-screen Image"
         width={1920}
         height={1080}
-        className="w-full h-screen sm:h-[800px] object-cover object-left-top"
+        className="w-full h-screen sm:h-[800px] object-cover object-left-top lg:h-screen lg:w-screen"
       />
     </div>
   );
