@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
               onClick={toggleSidebar}
             />
           </SheetTrigger>
-          <SheetContent className="max-w-52">
+          <SheetContent className="w-52 bg-black text-white">
             <ul className="md:flex flex flex-col items-center justify-center gap-4 p-0">
               {navbarLink.map((link, index) => (
                 <li
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
                   {link.subLinks &&
                     showGalleryOptions &&
                     link.label === "Gallery" && (
-                      <div className="flex flex-col items-start absolute top-full left-0 bg-white p-2 max-h-[300px] text-black z-50">
+                      <div className="flex flex-col items-start absolute top-full left-0 bg-black p-2 max-h-[300px] text-white z-50">
                         {link.subLinks.map((subLink, subIndex) => (
                           <Link key={subIndex} href={subLink.route}>
                             <Button size="subNavSheet" variant="ghost">

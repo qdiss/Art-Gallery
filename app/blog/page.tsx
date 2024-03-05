@@ -11,7 +11,9 @@ const Blog = () => {
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
         <div className="flex items-center justify-between mx-0 h-[45px] bg-[#656565]">
-          <h1 className="font-semibold ml-[90px] text-white">Blog</h1>
+          <h1 className="font-light text-2xl lg:ml-[90px] md:ml-10 ml-6 text-white">
+            Blog
+          </h1>
         </div>
       </div>
       <div className="my-[45px] py-20">

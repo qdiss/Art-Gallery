@@ -10,7 +10,9 @@ const Contact = (): JSX.Element => {
         <Navbar />
 
         <div className="flex items-center justify-between mx-0 h-[45px] bg-[#656565]">
-          <h1 className="font-semibold ml-8 text-white">Contact</h1>
+          <h1 className="font-light text-2xl lg:ml-[90px] md:ml-10 ml-6 text-white">
+            Contact
+          </h1>
         </div>
 
         <div className="w-full flex items-center justify-center flex-col">

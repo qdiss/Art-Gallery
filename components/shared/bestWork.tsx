@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const BestWork = () => {
   return (
-    <div className="flex flex-col bg-black w-full h-full overflow-y-hidden fixed">
+    <div className="flex flex-col bg-black w-full h-full">
       <div>
         <Navbar />
 
         {/* CITAVA KOMPONENTA */}
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:fixed">
           {/* LEVA STRANA */}
-          <div className="w-1/3 flex items-center ml-6 my-9">
+          <div className="w-full lg:w-1/3 flex items-center ml-6 my-9">
             <Image
               src="/10.webp"
               alt="15"
@@ -22,7 +22,7 @@ const BestWork = () => {
           </div>
 
           {/* DESNA STRANA */}
-          <div className="w-2/3 h-fit">
+          <div className="w-full lg:w-2/3 mx-0 lg:ml-32">
             {/* KOLONA */}
             <div className="flex flex-col">
               {/* NASLOV */}
@@ -37,18 +37,18 @@ const BestWork = () => {
                 />
               </div>
               {/* PRVI RED */}
-              <div className="flex flex-col items-center justify-center mt-2 md:flex-row">
+              <div className="flex flex-col lg:flex-row items-center justify-center">
                 <Image
                   src="/14.webp"
                   alt="11"
-                  width={200}
+                  width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover"
+                  className="h-[200px] p-2 object-cover mt-4 lg:mt-0"
                 />
                 <Image
                   src="/riba2.webp"
                   alt="12"
-                  width={250}
+                  width={270}
                   height={500}
                   className="h-[200px] p-2 object-cover"
                 />
@@ -62,18 +62,18 @@ const BestWork = () => {
               </div>
 
               {/* DRUGI RED */}
-              <div className="flex flex-col items-center justify-center md:flex-row">
+              <div className="flex flex-col lg:flex-row items-center justify-center">
                 <Image
                   src="/slika5.webp"
                   alt="11"
-                  width={200}
+                  width={270}
                   height={500}
                   className="h-[200px] p-2 object-cover"
                 />
                 <Image
                   src="/11.webp"
                   alt="12"
-                  width={250}
+                  width={270}
                   height={500}
                   className="h-[200px] p-2 object-cover"
                 />
@@ -82,7 +82,7 @@ const BestWork = () => {
                   alt="13"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover"
+                  className="h-[200px] p-2 object-cover mb-6 lg:mb-0"
                 />
               </div>
             </div>
