@@ -26,14 +26,14 @@ const BestWork = () => {
             {/* KOLONA */}
             <div className="flex flex-col">
               {/* NASLOV */}
-              <div className="flex flex-col items-center justify-center text-4xl text-white">
+              <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl">
                 <h1 className="uppercase font-light">Some of my best Work</h1>
                 <Image
                   src="/traka.png"
                   alt="traka"
-                  width={350}
+                  width={250}
                   height={100}
-                  className="flex items-center justify-center"
+                  className="flex items-center justify-center lg:w-[350px] lg:h-[100px] mt-2"
                 />
               </div>
               {/* PRVI RED */}
