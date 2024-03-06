@@ -30,7 +30,7 @@ const CarouselThree = (): JSX.Element => {
       price: "On request",
       width: 470,
       height: 210,
-      xl: { width: 800, height: 400 },
+      xl: { width: 700, height: 400 },
     },
     {
       src: "/8.webp",
@@ -39,7 +39,7 @@ const CarouselThree = (): JSX.Element => {
       price: "On request",
       width: 550,
       height: 200,
-      xl: { width: 800, height: 500 },
+      xl: { width: 920, height: 500 },
     },
     {
       src: "/9.webp",
@@ -48,7 +48,7 @@ const CarouselThree = (): JSX.Element => {
       price: "On request",
       width: 470,
       height: 200,
-      xl: { width: 800, height: 400 },
+      xl: { width: 670, height: 400 },
     },
   ];
 
@@ -150,16 +150,16 @@ const CarouselThree = (): JSX.Element => {
                         </Button>
                       </div>
                       <div className="mx-0 lg:mx-0 w-full 2xl:w-96 font-light">
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Name: <strong>{imageInfo.name}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Date: <strong>{imageInfo.date}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Price: <strong>{imageInfo.price}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Mail:{" "}
                           <strong>
                             <Link href="mailto:edo.opanovic@gmail.com">

@@ -39,7 +39,7 @@ const CarouselTwo = (): JSX.Element => {
       price: "On request",
       width: 370,
       height: 250,
-      xl: { width: 600, height: 350 },
+      xl: { width: 590, height: 350 },
     },
     {
       src: "/slika6.webp",
@@ -48,7 +48,7 @@ const CarouselTwo = (): JSX.Element => {
       price: "On request",
       width: 500,
       height: 350,
-      xl: { width: 800, height: 400 },
+      xl: { width: 794, height: 400 },
     },
   ];
 
@@ -150,16 +150,16 @@ const CarouselTwo = (): JSX.Element => {
                         </Button>
                       </div>
                       <div className="mx-0 lg:mx-0 w-full 2xl:w-96 font-light">
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Name: <strong>{imageInfo.name}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Date: <strong>{imageInfo.date}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Price: <strong>{imageInfo.price}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Mail:{" "}
                           <strong>
                             <Link href="mailto:edo.opanovic@gmail.com">

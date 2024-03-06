@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Image from "next/image";
@@ -12,10 +12,15 @@ interface ImageInfo {
   price: string;
   width: number;
   height: number;
+  xl: {
+    width: number;
+    height: number;
+  };
 }
 
 const CarouselOne = (): JSX.Element => {
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const imageInfoArray: ImageInfo[] = [
     {
@@ -25,6 +30,7 @@ const CarouselOne = (): JSX.Element => {
       price: "On request",
       width: 364,
       height: 210,
+      xl: { width: 420, height: 350 },
     },
     {
       src: "/slika2.webp",
@@ -33,6 +39,7 @@ const CarouselOne = (): JSX.Element => {
       price: "On request",
       width: 820,
       height: 400,
+      xl: { width: 820, height: 400 },
     },
     {
       src: "/slika3.webp",
@@ -41,6 +48,7 @@ const CarouselOne = (): JSX.Element => {
       price: "On request",
       width: 350,
       height: 200,
+      xl: { width: 400, height: 350 },
     },
   ];
 
@@ -51,6 +59,23 @@ const CarouselOne = (): JSX.Element => {
   const closeFullscreen = () => {
     setFullscreenImage(null);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Postavi početnu vrijednost za širinu ekrana
+    setWindowWidth(window.innerWidth);
+
+    // Dodaj slušač za promjenu veličine ekrana
+    window.addEventListener("resize", handleResize);
+
+    // Ukloni slušač kada komponenta prestane biti montirana
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="relative lg:fixed">
@@ -74,9 +99,19 @@ const CarouselOne = (): JSX.Element => {
             <Image
               src={imageInfo.src}
               alt={`Slika ${index + 1}`}
-              width={imageInfo.width}
-              height={imageInfo.height}
-              className="object-cover cursor-pointer drop-shadow-2xl shadow-black"
+              width={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.width
+                  : imageInfo.width
+              }
+              height={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.height
+                  : imageInfo.height
+              }
+              className={
+                "object-cover cursor-pointer drop-shadow-2xl shadow-black 2xl"
+              }
               onClick={() => openFullscreen(imageInfo.src)}
               onContextMenu={(e) => e.preventDefault()}
             />
@@ -115,16 +150,16 @@ const CarouselOne = (): JSX.Element => {
                         </Button>
                       </div>
                       <div className="mx-0 lg:mx-0 w-full 2xl:w-96 font-light">
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Name: <strong>{imageInfo.name}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Date: <strong>{imageInfo.date}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px] font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Price: <strong>{imageInfo.price}</strong>
                         </p>
-                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-30px]  font-light">
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Mail:{" "}
                           <strong>
                             <Link href="mailto:edo.opanovic@gmail.com">

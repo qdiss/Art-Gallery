@@ -43,21 +43,21 @@ const BestWork = () => {
                   alt="11"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover mt-4 lg:mt-0"
+                  className="h-[250px] p-2 object-cover mt-4 lg:mt-0"
                 />
                 <Image
                   src="/riba2.webp"
                   alt="12"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover"
+                  className="h-[250px] p-2 object-cover"
                 />
                 <Image
                   src="/slika2.webp"
                   alt="13"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover"
+                  className="h-[250px] p-2 object-cover"
                 />
               </div>
 
@@ -68,21 +68,21 @@ const BestWork = () => {
                   alt="11"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover"
+                  className="h-[250px] p-2"
                 />
                 <Image
                   src="/11.webp"
                   alt="12"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover"
+                  className="h-[250px] p-2 object-cover"
                 />
                 <Image
                   src="/8.webp"
                   alt="13"
                   width={270}
                   height={500}
-                  className="h-[200px] p-2 object-cover mb-6 lg:mb-0"
+                  className="h-[250px] p-2 object-cover mb-6 lg:mb-0"
                 />
               </div>
             </div>
