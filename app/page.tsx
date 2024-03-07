@@ -6,22 +6,22 @@ import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react"; // Importovanje Transition komponente iz @headlessui/react biblioteke
 
 export default function Home() {
-  const [activeCarousel, setActiveCarousel] = useState<string>("bestWork");
+  const [activeCarousel, setActiveCarousel] = useState<string>("hero");
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveCarousel((prevActive: string) => {
-  //       return prevActive === "hero" ? "bestWork" : "hero";
-  //     });
-  //   }, 5000); // Promenite broj u milisekundama prema potrebi (ovde svakih 10 sekundi)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCarousel((prevActive: string) => {
+        return prevActive === "hero" ? "bestWork" : "hero";
+      });
+    }, 5000); // Promenite broj u milisekundama prema potrebi (ovde svakih 10 sekundi)
 
-  //   return () => clearInterval(interval);
-  // }, []); // Prazno polje kao zavisnost osigurava da se useEffect izvršava samo prilikom montiranja komponente
+    return () => clearInterval(interval);
+  }, []); // Prazno polje kao zavisnost osigurava da se useEffect izvršava samo prilikom montiranja komponente
 
   return (
     <div className="relative">
       <div className="w-full h-full">
-        {/* <Transition
+        <Transition
           show={activeCarousel === "hero"}
           enter="transition-opacity duration-1000"
           enterFrom="opacity-0"
@@ -31,7 +31,7 @@ export default function Home() {
           leaveTo="opacity-0"
         >
           <Hero />
-        </Transition> */}
+        </Transition>
         <Transition
           show={activeCarousel === "bestWork"}
           enter="transition-opacity duration-1000"
