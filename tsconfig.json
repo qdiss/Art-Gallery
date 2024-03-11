@@ -21,6 +21,14 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/shared/TranslationsProvider.js",
+    "components/shared/bestWork.js",
+    "components/shared/LanguageChanger.js"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,0 +1,15 @@
+{
+  "name": "Naziv",
+  "date": "Datum",
+  "price": "Cijena",
+  "onRequest": "Na upit",
+  "fish": "Ribe",
+  "other": "Ostalo",
+  "wooden": "Drveni Brodovi",
+  "gallery": "Galerija",
+  "art": "Digitalna Umjetnost",
+  "fineArt": "Likovna umjetnost Dalmacije",
+  "cro": "Hrvatski",
+  "eng": "Engleski",
+  "lang": "Odaberite jezik: "
+}

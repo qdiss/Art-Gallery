@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { navbarLink } from "@/constants";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import LanguageChanger from "./LanguageChanger";
+import { useTranslation } from "react-i18next";
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
+  const { t } = useTranslation("common");
   const [active, setActive] = useState(false);
   const [showGalleryOptions, setShowGalleryOptions] = useState<boolean>(false);
 
@@ -35,8 +38,8 @@ const Navbar: React.FC = () => {
         </Link>
         <Link href="/">
           <div className="flex items-center justify-center flex-col ml-4 font-light">
-            <p className="text-2xl">Fine Art Of Dalmatia</p>
-            <p className="text-lg uppercase">Digital Art</p>
+            <p className="text-2xl">{t("fineArt")}</p>
+            <p className="text-lg uppercase">{t("art")}</p>
           </div>
         </Link>
       </div>
@@ -92,12 +95,16 @@ const Navbar: React.FC = () => {
                 </li>
               ))}
             </ul>
+            <div className="flex items-center justify-center mt-4">
+              <LanguageChanger />
+            </div>
           </SheetContent>
         </Sheet>
       </div>
 
       <nav className="z-100">
         <ul className="hidden lg:flex items-center p-0">
+          <LanguageChanger />
           {navbarLink.map((link, index) => (
             <li
               key={index}
@@ -127,6 +134,4 @@ const Navbar: React.FC = () => {
       </nav>
     </header>
   );
-};
-
-export default Navbar;
+}

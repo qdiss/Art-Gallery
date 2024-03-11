@@ -6,6 +6,7 @@ import Link from "next/link";
 import { navbarLink } from "@/constants";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
+import LanguageChanger from "./LanguageChanger";
 
 const Hero = () => {
   const [active, setActive] = useState(false);
@@ -93,6 +94,9 @@ const Hero = () => {
                 </li>
               ))}
             </ul>
+            <div className="flex items-center justify-center mt-4">
+              <LanguageChanger />
+            </div>
           </SheetContent>
         </Sheet>
       </div>
