@@ -116,7 +116,7 @@ const Hero = () => {
                 </Button>
               </Link>
               {link.subLinks && showGalleryOptions && (
-                <div className="mt-1 flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
+                <div className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
                   {link.subLinks.map((subLink, subIndex) => (
                     <Link key={subIndex} href={subLink.route}>
                       <Button size="subNav" variant="ghost">

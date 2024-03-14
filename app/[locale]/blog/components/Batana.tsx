@@ -16,9 +16,12 @@ export default async function Batana({
           className="w-full md:w-[500px] h-[500px] mx-auto md:mx-0"
         />
       </div>
-      <div className="w-full md:w-1/2 px-8 md:mr-10 mt-2 md:mt-0">
+      <div
+        className="w-full md:w-1/2 px-8 md:mr-10 mt-2 md:mt-0"
+        style={{ textAlign: "justify" }}
+      >
         <h1 className="text-2xl mb-8 text-center md:text-left">BATANA</h1>
-        <p className="text-xl">Betin&#39;s {t("blog:batana1")}</p>
+        <p className="text-xl">{t("blog:batana1")}</p>
         <p className="text-xl mt-2">{t("blog:batana2")}</p>
         <p className="text-xl mt-2">{t("blog:batana3")}</p>
         <p className="text-xl mt-2">{t("blog:batana4")}</p>

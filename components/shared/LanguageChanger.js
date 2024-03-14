@@ -6,15 +6,12 @@ import { useTranslation } from "react-i18next";
 import i18nConfig from "@/i18nConfig";
 
 export default function LanguageChanger() {
-  const { t } = useTranslation();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
 
-  const handleChange = (e) => {
-    const newLocale = e.target.value;
-
+  const handleChange = (newLocale) => {
     // set cookie for next-i18n-router
     const days = 30;
     const date = new Date();
@@ -39,14 +36,18 @@ export default function LanguageChanger() {
 
   return (
     <div className="inline-block relative">
-      <select
-        onChange={handleChange}
-        defaultValue={currentLocale}
-        className="mr-4 block appearance-none w-16 bg-black border rounded-md py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-black "
+      <button
+        onClick={() => handleChange("en")}
+        className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
       >
-        <option value="en">{t("eng")}</option>
-        <option value="hr">{t("cro")}</option>
-      </select>
+        <img src="/en.png" alt="English" className="h-11 w-auto" />
+      </button>
+      <button
+        onClick={() => handleChange("hr")}
+        className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
+      >
+        <img src="/cro.png" alt="Hrvatski" className="h-10 w-auto" />
+      </button>
     </div>
   );
 }

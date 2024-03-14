@@ -16,7 +16,10 @@ export default async function Leut({
           className="w-full md:w-[500px] h-[500px] mx-auto md:mx-0"
         />
       </div>
-      <div className="w-full md:w-1/2 px-8 md:mr-10 mt-2 md:mt-0">
+      <div
+        className="w-full md:w-1/2 px-8 md:mr-10 mt-2 md:mt-0 "
+        style={{ textAlign: "justify" }}
+      >
         <h1 className="text-2xl mb-8 text-center md:text-left">LEUT</h1>
         <p className="text-xl">{t("blog:leut")}</p>
       </div>
