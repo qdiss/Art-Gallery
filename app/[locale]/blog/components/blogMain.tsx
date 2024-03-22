@@ -21,7 +21,7 @@ export default async function Blog({
           </h1>
         </div>
       </div>
-      <div className="my-[45px] py-20">
+      <div className="my-[15px]">
         <BlogHero params={{ locale }} />
         <Leut params={{ locale }} />
         <Pasara params={{ locale }} />

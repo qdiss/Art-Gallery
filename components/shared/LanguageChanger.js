@@ -10,6 +10,7 @@ export default function LanguageChanger() {
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
+  const active = currentPathname === "/";
 
   const handleChange = (newLocale) => {
     // set cookie for next-i18n-router
@@ -36,18 +37,21 @@ export default function LanguageChanger() {
 
   return (
     <div className="inline-block relative">
-      <button
-        onClick={() => handleChange("en")}
-        className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
-      >
-        <img src="/en.png" alt="English" className="h-11 w-auto" />
-      </button>
-      <button
-        onClick={() => handleChange("hr")}
-        className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
-      >
-        <img src="/cro.png" alt="Hrvatski" className="h-10 w-auto" />
-      </button>
+      {active ? (
+        <button
+          onClick={() => handleChange("hr")}
+          className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
+        >
+          <img src="/cro.png" alt="Hrvatski" className="h-10 w-auto" />
+        </button>
+      ) : (
+        <button
+          onClick={() => handleChange("en")}
+          className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
+        >
+          <img src="/en.png" alt="English" className="h-11 w-auto" />
+        </button>
+      )}
     </div>
   );
 }

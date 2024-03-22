@@ -39,6 +39,7 @@ const Hero = () => {
           alt="logo"
           width={300}
           height={140}
+          loading="eager"
           className="w-[200px] md:w-[400px] md:object-contain"
         />
       </div>
@@ -103,6 +104,7 @@ const Hero = () => {
 
       <nav className="z-100 flex justify-between absolute top-4 right-0 mr-20 mt-0 z-10 space-x-4 text-3xl">
         <ul className="hidden md:flex items-center p-0">
+          <LanguageChanger />
           {navbarLink.map((link, index) => (
             <li
               key={index}
@@ -134,8 +136,8 @@ const Hero = () => {
       <Image
         src="/hero.webp"
         alt="Full-screen Image"
-        width={1920}
-        height={1080}
+        width={1600} // Adjust width to a size closer to the maximum viewport width
+        height={900} // Adjust height proportionally to maintain aspect ratio (16:9)
         className="w-full h-screen sm:h-[800px] object-cover object-left-top lg:h-screen lg:w-screen"
       />
     </div>
