@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import i18nConfig from "@/i18nConfig";
+import Image from "next/image";
 
 export default function LanguageChanger() {
   const { t, i18n } = useTranslation();
@@ -36,22 +37,32 @@ export default function LanguageChanger() {
   };
 
   return (
-    <div className="inline-block relative">
-      {active ? (
-        <button
-          onClick={() => handleChange("hr")}
-          className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
-        >
-          <img src="/cro.png" alt="Hrvatski" className="h-10 w-auto" />
-        </button>
-      ) : (
-        <button
-          onClick={() => handleChange("en")}
-          className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
-        >
-          <img src="/en.png" alt="English" className="h-11 w-auto" />
-        </button>
-      )}
+    <div className="inline-block relative mt-[8px] space-x-4">
+      <button
+        onClick={() => handleChange("hr")}
+        className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
+      >
+        <Image
+          src="/hr.svg"
+          alt="Hrvatski"
+          width={24}
+          height={24}
+          className="rounded-sm"
+        />
+      </button>
+
+      <button
+        onClick={() => handleChange("en")}
+        className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
+      >
+        <Image
+          src="/en.svg"
+          alt="English"
+          width={24}
+          height={24}
+          className="rounded-sm"
+        />
+      </button>
     </div>
   );
 }

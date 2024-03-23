@@ -104,7 +104,9 @@ export default function Navbar() {
 
       <nav className="z-100">
         <ul className="hidden lg:flex items-center p-0">
-          <LanguageChanger />
+          <div className="flex items-center justify-center mt-1.5 mr-1">
+            <LanguageChanger />
+          </div>
           {navbarLink.map((link, index) => (
             <li
               key={index}
