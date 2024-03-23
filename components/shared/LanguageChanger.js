@@ -42,26 +42,14 @@ export default function LanguageChanger() {
         onClick={() => handleChange("hr")}
         className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
       >
-        <Image
-          src="/hr.svg"
-          alt="Hrvatski"
-          width={32}
-          height={32}
-          className="rounded-sm"
-        />
+        <Image src="/hrvatska.svg" alt="Hrvatski" width={32} height={32} />
       </button>
 
       <button
         onClick={() => handleChange("en")}
         className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
       >
-        <Image
-          src="/england.svg"
-          alt="English"
-          width={32}
-          height={32}
-          className="rounded-sm"
-        />
+        <Image src="/england.svg" alt="English" width={32} height={32} />
       </button>
     </div>
   );
