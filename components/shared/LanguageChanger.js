@@ -45,8 +45,8 @@ export default function LanguageChanger() {
         <Image
           src="/hr.svg"
           alt="Hrvatski"
-          width={24}
-          height={24}
+          width={28}
+          height={28}
           className="rounded-sm"
         />
       </button>
@@ -58,8 +58,8 @@ export default function LanguageChanger() {
         <Image
           src="/en.svg"
           alt="English"
-          width={24}
-          height={24}
+          width={28}
+          height={28}
           className="rounded-sm"
         />
       </button>
