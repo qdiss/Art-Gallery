@@ -25,7 +25,7 @@ export default function CarouselOne() {
 
   const imageInfoArray: ImageInfo[] = [
     {
-      src: "/13.jpg",
+      src: "/slika1.webp",
       date: "October 2023",
       name: "život je lijep",
       width: 500,
@@ -33,7 +33,7 @@ export default function CarouselOne() {
       xl: { width: 1000, height: 600 },
     },
     {
-      src: "/14.webp",
+      src: "/slika2.webp",
       date: "February 2022",
       name: "bonaca",
       width: 430,
@@ -41,7 +41,7 @@ export default function CarouselOne() {
       xl: { width: 900, height: 600 },
     },
     {
-      src: "/15.webp",
+      src: "/slika3.webp",
       date: "April 2023",
       name: "pred neveru",
       width: 500,
