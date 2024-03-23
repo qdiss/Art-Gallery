@@ -6,17 +6,17 @@ import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 
 export default function Carousel() {
-  const [activeCarousel, setActiveCarousel] = useState<string>("hero");
+  const [activeCarousel, setActiveCarousel] = useState<string>("bestWork");
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveCarousel((prevActive: string) => {
-        return prevActive === "hero" ? "bestWork" : "hero";
-      });
-    }, 5000); //Promenite broj u milisekundama prema potrebi (ovde svakih 10 sekundi)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveCarousel((prevActive: string) => {
+  //       return prevActive === "hero" ? "bestWork" : "hero";
+  //     });
+  //   }, 5000); //Promenite broj u milisekundama prema potrebi (ovde svakih 10 sekundi)
 
-    return () => clearInterval(interval);
-  }, []); //Prazno polje kao zavisnost osigurava da se useEffect izvršava samo prilikom montiranja komponente
+  //   return () => clearInterval(interval);
+  // }, []); //Prazno polje kao zavisnost osigurava da se useEffect izvršava samo prilikom montiranja komponente
 
   return (
     <div className="relative">

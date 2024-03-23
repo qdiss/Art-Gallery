@@ -11,87 +11,75 @@ import LanguageChanger from "./LanguageChanger";
 export default function BestWork() {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col bg-black w-full h-full lg:w-screen">
-      <div>
-        <NavbarWork />
-        {/* CITAVA KOMPONENTA */}
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:fixed lg:w-screen">
-          {/* LEVA STRANA */}
-          <div className="w-full lg:w-1/3 flex items-center ml-6 my-9">
+    <div className="mx-auto flex flex-col bg-black w-full h-full lg:w-screen text-white">
+      <NavbarWork />
+      <div className="flex flex-col lg:flex-row items-center justify-center">
+        <Image
+          src="/10.webp"
+          alt="Wooden Boat"
+          width={400}
+          height={300}
+          className="2xl:w-[500px] 2xl:h-[620px] w-[400px] h-[500px] object-cover pt-2 hidden lg:block mx-auto"
+        />
+        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-5xl">
+          <h1 className="uppercase font-light mt-9">{t("header")}</h1>
+          <Image
+            src="/traka.png"
+            alt="traka"
+            width={250}
+            height={100}
+            className="flex items-center justify-center mt-2 lg:mb-4"
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-3 px-3">
             <Image
               src="/10.webp"
-              alt="15"
-              width={500}
+              alt="11"
+              width={270}
               height={500}
-              className="h-[600px] p-2 object-cover hidden lg:block"
+              className="h-[250px] p-2 object-cover mt-4 lg:hidden"
             />
-          </div>
-
-          {/* DESNA STRANA */}
-          <div className="w-full lg:w-2/3 mx-0 lg:ml-32">
-            {/* KOLONA */}
-            <div className="flex flex-col">
-              {/* NASLOV */}
-              <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl">
-                <h1 className="uppercase font-light">{t("header")}</h1>
-                <Image
-                  src="/traka.png"
-                  alt="traka"
-                  width={250}
-                  height={100}
-                  className="flex items-center justify-center mt-2 lg:mb-4"
-                />
-              </div>
-              {/* PRVI RED */}
-              <div className="flex flex-col lg:flex-row items-center justify-center">
-                <Image
-                  src="/14.webp"
-                  alt="11"
-                  width={270}
-                  height={500}
-                  className="h-[250px] p-2 object-cover mt-4 lg:mt-0"
-                />
-                <Image
-                  src="/riba2.webp"
-                  alt="12"
-                  width={270}
-                  height={500}
-                  className="h-[250px] p-2 object-cover"
-                />
-                <Image
-                  src="/slika2.webp"
-                  alt="13"
-                  width={270}
-                  height={500}
-                  className="h-[250px] p-2 object-cover"
-                />
-              </div>
-
-              {/* DRUGI RED */}
-              <div className="flex flex-col lg:flex-row items-center justify-center">
-                <Image
-                  src="/slika5.webp"
-                  alt="11"
-                  width={270}
-                  height={500}
-                  className="h-[250px] p-2"
-                />
-                <Image
-                  src="/11.webp"
-                  alt="12"
-                  width={270}
-                  height={500}
-                  className="h-[250px] p-2 object-cover"
-                />
-                <Image
-                  src="/8.webp"
-                  alt="13"
-                  width={270}
-                  height={500}
-                  className="h-[250px] p-2 object-cover mb-6 lg:mb-0"
-                />
-              </div>
-            </div>
+            <Image
+              src="/14.webp"
+              alt="11"
+              width={270}
+              height={500}
+              className="h-[250px] p-2 object-cover lg:mt-0"
+            />
+            <Image
+              src="/riba2.webp"
+              alt="12"
+              width={270}
+              height={500}
+              className="h-[250px] p-2 object-cover"
+            />
+            <Image
+              src="/slika2.webp"
+              alt="13"
+              width={270}
+              height={500}
+              className="h-[250px] p-2 object-cover"
+            />
+            <Image
+              src="/slika5.webp"
+              alt="11"
+              width={270}
+              height={500}
+              className="h-[250px] p-2"
+            />
+            <Image
+              src="/11.webp"
+              alt="12"
+              width={270}
+              height={500}
+              className="h-[250px] p-2 object-cover"
+            />
+            <Image
+              src="/8.webp"
+              alt="13"
+              width={270}
+              height={500}
+              className="h-[250px] p-2 object-cover mb-6 lg:mb-0"
+            />
           </div>
         </div>
       </div>
@@ -128,8 +116,8 @@ export function NavbarWork() {
         </Link>
         <Link href="/">
           <div className="flex items-center justify-center flex-col ml-4 font-light">
-            <p className="text-2xl">{t("fineArt")}</p>
-            <p className="text-lg uppercase">{t("art")}</p>
+            <p className="text-2xl">Fine Art of Dalmatia</p>
+            <p className="text-lg uppercase">Digital Art</p>
           </div>
         </Link>
       </div>
