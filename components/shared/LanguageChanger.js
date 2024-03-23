@@ -37,7 +37,7 @@ export default function LanguageChanger() {
   };
 
   return (
-    <div className="inline-block relative mt-[8px] space-x-4">
+    <div className="inline-block relative mt-[8px] space-x-4 mr-5">
       <button
         onClick={() => handleChange("hr")}
         className={`mr-2 ${currentLocale === "hr" ? "font-bold" : ""}`}
