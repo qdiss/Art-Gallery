@@ -56,7 +56,7 @@ export default function LanguageChanger() {
         className={`mr-2 ${currentLocale === "en" ? "font-bold" : ""}`}
       >
         <Image
-          src="/en.svg"
+          src="/england.svg"
           alt="English"
           width={32}
           height={32}
