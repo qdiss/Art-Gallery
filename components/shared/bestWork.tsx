@@ -13,13 +13,13 @@ export default function BestWork() {
   return (
     <div className="mx-auto flex flex-col bg-black w-full h-full lg:w-screen text-white">
       <NavbarWork />
-      <div className="flex flex-col lg:flex-row items-center justify-between">
+      <div className="flex flex-col lg:flex-row items-center justify-between mt-8">
         <Image
           src="/10.webp"
           alt="Wooden Boat"
           width={400}
           height={300}
-          className="2xl:w-[500px] 2xl:h-[620px] w-[400px] h-[500px] object-cover pt-2 hidden lg:block mr-0 ml-20"
+          className="2xl:w-[500px] 2xl:h-[580px] w-[400px] h-[480px] object-cover pt-2 hidden lg:block mr-0 ml-20"
         />
         <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-2">
           <div className="flex items-center justify-center flex-col">
@@ -64,9 +64,9 @@ export default function BestWork() {
             <Image
               src="/slika5.webp"
               alt="11"
-              width={300}
+              width={240}
               height={500}
-              className="h-[200px] w-full object-cover"
+              className="h-[200px]"
             />
             <Image
               src="/11.webp"
