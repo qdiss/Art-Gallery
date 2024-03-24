@@ -13,72 +13,74 @@ export default function BestWork() {
   return (
     <div className="mx-auto flex flex-col bg-black w-full h-full lg:w-screen text-white">
       <NavbarWork />
-      <div className="flex flex-col lg:flex-row items-center justify-center">
+      <div className="flex flex-col lg:flex-row items-center justify-between">
         <Image
           src="/10.webp"
           alt="Wooden Boat"
           width={400}
           height={300}
-          className="2xl:w-[500px] 2xl:h-[620px] w-[400px] h-[500px] object-cover pt-2 hidden lg:block mx-auto"
+          className="2xl:w-[500px] 2xl:h-[620px] w-[400px] h-[500px] object-cover pt-2 hidden lg:block mr-0 ml-20"
         />
-        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-5xl">
-          <h1 className="uppercase font-light mt-9">{t("header")}</h1>
-          <Image
-            src="/traka.png"
-            alt="traka"
-            width={250}
-            height={100}
-            className="flex items-center justify-center mt-2 lg:mb-4"
-          />
-          <div className="grid grid-cols-1 lg:grid-cols-3 px-3">
+        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-2">
+          <div className="flex items-center justify-center flex-col">
+            <h1 className="uppercase font-light mt-9">{t("header")}</h1>
+            <Image
+              src="/traka.png"
+              alt="traka"
+              width={350}
+              height={100}
+              className="flex items-center justify-center mt-2 lg:mb-4"
+            />
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 w-fit gap-2">
             <Image
               src="/10.webp"
               alt="11"
-              width={270}
+              width={240}
               height={500}
-              className="h-[250px] p-2 object-cover mt-4 lg:hidden"
+              className="h-[200px] mt-4 lg:hidden"
             />
             <Image
               src="/14.webp"
               alt="11"
-              width={270}
+              width={240}
               height={500}
-              className="h-[250px] p-2 object-cover lg:mt-0"
+              className="h-[200px] object-cover w-full"
             />
             <Image
               src="/riba2.webp"
               alt="12"
-              width={270}
+              width={280}
               height={500}
-              className="h-[250px] p-2 object-cover"
+              className="h-[200px]"
             />
             <Image
               src="/slika2.webp"
               alt="13"
-              width={270}
+              width={240}
               height={500}
-              className="h-[250px] p-2 object-cover"
+              className="h-[200px] object-cover "
             />
             <Image
               src="/slika5.webp"
               alt="11"
-              width={270}
+              width={300}
               height={500}
-              className="h-[250px] p-2"
+              className="h-[200px] w-full object-cover"
             />
             <Image
               src="/11.webp"
               alt="12"
-              width={270}
+              width={280}
               height={500}
-              className="h-[250px] p-2 object-cover"
+              className="h-[200px]"
             />
             <Image
               src="/8.webp"
               alt="13"
-              width={270}
+              width={240}
               height={500}
-              className="h-[250px] p-2 object-cover mb-6 lg:mb-0"
+              className="h-[200px] object-cover mb-6 lg:mb-0"
             />
           </div>
         </div>
@@ -196,7 +198,7 @@ export function NavbarWork() {
                 </Button>
               </Link>
               {link.subLinks && showGalleryOptions && (
-                <div className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
+                <div className="flex flex-col items-start absolute top-full left-0 bg-white max-h-[300px] text-black z-50">
                   {link.subLinks.map((subLink, subIndex) => (
                     <Link key={subIndex} href={subLink.route}>
                       <Button size="subNav" variant="ghost">
