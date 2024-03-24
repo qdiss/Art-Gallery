@@ -14,10 +14,6 @@ export default function Navbar() {
   const [active, setActive] = useState(false);
   const [showGalleryOptions, setShowGalleryOptions] = useState<boolean>(false);
 
-  const toggleSidebar = () => {
-    setActive(!active);
-  };
-
   const handleMouseEnter = () => {
     setShowGalleryOptions(true);
   };
@@ -26,8 +22,16 @@ export default function Navbar() {
     setShowGalleryOptions(false);
   };
 
+  const handleOptionClick = () => {
+    setShowGalleryOptions(false);
+  };
+
   const handleGalleryClick = () => {
     setShowGalleryOptions(!showGalleryOptions);
+  };
+
+  const toggleSidebar = () => {
+    setActive(!active);
   };
 
   return (
@@ -102,37 +106,86 @@ export default function Navbar() {
         </Sheet>
       </div>
 
-      <nav className="z-100">
-        <ul className="hidden lg:flex items-center p-0">
-          <div className="flex items-center justify-center mt-1.5 mr-1">
-            <LanguageChanger />
-          </div>
-          {navbarLink.map((link, index) => (
-            <li
-              key={index}
-              className="font-light mr-5 relative"
-              onMouseEnter={link.subLinks ? handleMouseEnter : undefined}
-              onMouseLeave={link.subLinks ? handleMouseLeave : undefined}
+      <nav className="lg:flex items-center justify-center hidden">
+        <div className="flex items-center justify-center mt-1.5 mr-1">
+          <LanguageChanger />
+        </div>
+        <Link href="/">
+          <Button
+            size="navigation"
+            variant="navigation"
+            className="hover:bg-inherit"
+          >
+            {t("home")}
+          </Button>
+        </Link>
+        <div className="relative hidden lg:flex items-center p-0">
+          <Link href="/gallery">
+            <Button
+              size="navigation"
+              variant="navigation"
+              className="hover:bg-inherit font-light mr-5"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
-              <Link href={link.route} replace>
-                <Button variant="ghost" size="navigation">
-                  {link.label}
+              {t("gallery")}
+            </Button>
+          </Link>
+          {showGalleryOptions && (
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50"
+            >
+              <Link href="/gallery/wooden-boats">
+                <Button
+                  size="subNav"
+                  variant="ghost"
+                  onClick={handleOptionClick}
+                >
+                  {t("wooden")}
                 </Button>
               </Link>
-              {link.subLinks && showGalleryOptions && (
-                <div className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
-                  {link.subLinks.map((subLink, subIndex) => (
-                    <Link key={subIndex} href={subLink.route}>
-                      <Button size="subNav" variant="ghost">
-                        {subLink.label}
-                      </Button>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
+              <Link href="/gallery/fish">
+                <Button
+                  size="subNav"
+                  variant="ghost"
+                  onClick={handleOptionClick}
+                >
+                  {t("fish")}
+                </Button>
+              </Link>
+              <Link href="/gallery/rest">
+                <Button
+                  size="subNav"
+                  variant="ghost"
+                  onClick={handleOptionClick}
+                >
+                  {t("other")}
+                </Button>
+              </Link>
+              <Link href="/gallery/all">
+                <Button
+                  size="subNav"
+                  variant="ghost"
+                  onClick={handleOptionClick}
+                >
+                  {t("all")}
+                </Button>
+              </Link>
+            </div>
+          )}
+        </div>
+        <Link href="/blog">
+          <Button size="navigation" variant="navigation">
+            {t("blog")}
+          </Button>
+        </Link>
+        <Link href="/contact">
+          <Button size="navigation" variant="navigation">
+            {t("contact")}
+          </Button>
+        </Link>
       </nav>
     </header>
   );

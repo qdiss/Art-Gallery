@@ -1,8 +1,11 @@
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
-import Navbar from "./navbar";
+
 import Link from "next/link";
 import Image from "next/image";
+
 import initTranslations from "@/app/i18n";
+
+import Navigation from "@/app/[locale]/components/navigation";
 
 export default async function Contact({
   params: { locale },
@@ -13,7 +16,7 @@ export default async function Contact({
   return (
     <section className="bg-black h-full">
       <div className="w-full h-full bg-black text-white relative">
-        <Navbar />
+        <Navigation params={{ locale }} />
 
         <div className="flex items-center justify-between mx-0 h-[45px] bg-[#656565]">
           <h1 className="font-light text-2xl lg:ml-[90px] md:ml-10 ml-6 text-white">

@@ -102,35 +102,85 @@ const Hero = () => {
         </Sheet>
       </div>
 
-      <nav className="z-100 flex justify-between absolute top-4 right-0 mr-20 mt-0 z-10 space-x-4 text-3xl">
-        <ul className="hidden md:flex items-center p-0">
-          <LanguageChanger />
-          {navbarLink.map((link, index) => (
-            <li
-              key={index}
-              className="font-light mr-5 relative"
-              onMouseEnter={link.subLinks ? handleMouseEnter : undefined}
-              onMouseLeave={link.subLinks ? handleMouseLeave : undefined}
-            >
-              <Link href={link.route} replace>
-                <Button variant="ghost" size="navigation">
-                  {link.label}
-                </Button>
-              </Link>
-              {link.subLinks && showGalleryOptions && (
-                <div className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[300px] text-black z-50">
-                  {link.subLinks.map((subLink, subIndex) => (
-                    <Link key={subIndex} href={subLink.route}>
-                      <Button size="subNav" variant="ghost">
-                        {subLink.label}
-                      </Button>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
+      <nav className="flex items-center justify-between absolute top-0 right-0 mr-20 mt-2 z-10 text-3xl">
+        <LanguageChanger />
+        <div className="flex flex-row items-center justify-center space-x-4">
+          <Link href="/">
+            <Button size="custom" variant="ghost" className="hover:bg-inherit">
+              Home
+            </Button>
+          </Link>
+
+          <div className="relative">
+            <Link href="/gallery">
+              <Button
+                size="custom"
+                variant="ghost"
+                className="hover:bg-inherit"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                Gallery
+              </Button>
+            </Link>
+            {showGalleryOptions && (
+              <div
+                className="flex flex-col items-center absolute top-full left-0 bg-white p-1 max-h-[180px] rounded-sm"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link href="/gallery/wooden-boats">
+                  <Button
+                    size="nav"
+                    variant="ghost"
+                    onClick={handleOptionClick}
+                  >
+                    Wooden Boats
+                  </Button>
+                </Link>
+                <Link href="/gallery/fish">
+                  <Button
+                    size="nav"
+                    variant="ghost"
+                    onClick={handleOptionClick}
+                  >
+                    Fish
+                  </Button>
+                </Link>
+                <Link href="/gallery/rest">
+                  <Button
+                    size="nav"
+                    variant="ghost"
+                    onClick={handleOptionClick}
+                  >
+                    The Rest
+                  </Button>
+                </Link>
+                <Link href="/gallery/all">
+                  <Button
+                    size="nav"
+                    variant="ghost"
+                    onClick={handleOptionClick}
+                  >
+                    All
+                  </Button>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link href="/blog">
+            <Button size="custom" variant="ghost" className="hover:bg-inherit">
+              Blog
+            </Button>
+          </Link>
+
+          <Link href="/contact">
+            <Button size="custom" variant="ghost" className="hover:bg-inherit">
+              Contact
+            </Button>
+          </Link>
+        </div>
       </nav>
 
       <Image
@@ -145,3 +195,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+//TODO NAPRAVITI ZA HERO I POSEBNO DODATI USE TRANSLATIONS
