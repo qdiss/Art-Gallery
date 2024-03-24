@@ -1,10 +1,10 @@
+import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/shared/TranslationsProvider";
-import initTranslations from "../i18n";
-import Carousel from "@/components/shared/carouselMain";
+import Hero from "@/components/shared/hero";
 
-const i18nNamespaces = ["common", "home"];
+const i18nNamespaces = ["common"];
 
-export default async function Home({
+export default async function Heroes({
   params: { locale },
 }: {
   params: { locale: string };
@@ -16,7 +16,7 @@ export default async function Home({
       locale={locale}
       namespaces={i18nNamespaces}
     >
-      <Carousel />
+      <Hero />
     </TranslationsProvider>
   );
 }

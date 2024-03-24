@@ -7,8 +7,11 @@ import { navbarLink } from "@/constants";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "../ui/button";
 import LanguageChanger from "./LanguageChanger";
+import { useTranslation } from "react-i18next";
+import initTranslations from "@/app/i18n";
 
-const Hero = () => {
+export default function MainHero() {
+  const { t } = useTranslation();
   const [active, setActive] = useState(false);
   const [showGalleryOptions, setShowGalleryOptions] = useState<boolean>(false);
 
@@ -107,12 +110,12 @@ const Hero = () => {
         <div className="flex flex-row items-center justify-center space-x-4">
           <Link href="/">
             <Button size="custom" variant="ghost" className="hover:bg-inherit">
-              Home
+              {t("home")}
             </Button>
           </Link>
 
           <div className="relative">
-            <Link href="/gallery">
+            <Link href="#">
               <Button
                 size="custom"
                 variant="ghost"
@@ -120,49 +123,49 @@ const Hero = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                Gallery
+                {t("gallery")}
               </Button>
             </Link>
             {showGalleryOptions && (
               <div
-                className="flex flex-col items-center absolute top-full left-0 bg-white p-1 max-h-[180px] rounded-sm"
+                className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[180px] rounded-sm"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link href="/gallery/wooden-boats">
                   <Button
-                    size="nav"
+                    size="subNav"
                     variant="ghost"
                     onClick={handleOptionClick}
                   >
-                    Wooden Boats
+                    {t("wooden")}
                   </Button>
                 </Link>
                 <Link href="/gallery/fish">
                   <Button
-                    size="nav"
+                    size="subNav"
                     variant="ghost"
                     onClick={handleOptionClick}
                   >
-                    Fish
+                    {t("fish")}
                   </Button>
                 </Link>
                 <Link href="/gallery/rest">
                   <Button
-                    size="nav"
+                    size="subNav"
                     variant="ghost"
                     onClick={handleOptionClick}
                   >
-                    The Rest
+                    {t("other")}
                   </Button>
                 </Link>
                 <Link href="/gallery/all">
                   <Button
-                    size="nav"
+                    size="subNav"
                     variant="ghost"
                     onClick={handleOptionClick}
                   >
-                    All
+                    {t("all")}
                   </Button>
                 </Link>
               </div>
@@ -171,13 +174,13 @@ const Hero = () => {
 
           <Link href="/blog">
             <Button size="custom" variant="ghost" className="hover:bg-inherit">
-              Blog
+              {t("blog")}
             </Button>
           </Link>
 
           <Link href="/contact">
             <Button size="custom" variant="ghost" className="hover:bg-inherit">
-              Contact
+              {t("contact")}
             </Button>
           </Link>
         </div>
@@ -192,8 +195,6 @@ const Hero = () => {
       />
     </div>
   );
-};
+}
 
-export default Hero;
-
-//TODO NAPRAVITI ZA HERO I POSEBNO DODATI USE TRANSLATIONS
+//TODO NAPRAVITI ZA MainHero I POSEBNO DODATI USE TRANSLATIONS

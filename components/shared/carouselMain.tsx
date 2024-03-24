@@ -1,9 +1,9 @@
 "use client";
 
-import Hero from "@/components/shared/hero";
 import BestWork from "@/components/shared/bestWork";
 import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
+import MainHero from "./hero";
 
 export default function Carousel() {
   const [activeCarousel, setActiveCarousel] = useState<string>("hero");
@@ -30,7 +30,7 @@ export default function Carousel() {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Hero />
+          <MainHero />
         </Transition>
         <Transition
           show={activeCarousel === "bestWork"}

@@ -124,7 +124,7 @@ export default function Navbar() {
             <Button
               size="navigation"
               variant="navigation"
-              className="hover:bg-inherit font-light mr-5"
+              className="hover:bg-inherit font-light"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
