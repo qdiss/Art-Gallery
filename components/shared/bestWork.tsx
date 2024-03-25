@@ -36,7 +36,7 @@ export default function BestWork() {
             <Image
               src="/10.webp"
               alt="11"
-              width={240}
+              width={280}
               height={500}
               className="h-[200px] mt-4 lg:hidden"
             />
@@ -142,44 +142,82 @@ export function NavbarWork() {
             />
           </SheetTrigger>
           <SheetContent className="w-52 bg-black text-white">
-            <ul className="md:flex flex flex-col items-center justify-center gap-4 p-0">
-              {navbarLink.map((link, index) => (
-                <li
-                  key={index}
-                  className="font-light mr-5 relative"
-                  onMouseEnter={link.subLinks ? handleMouseEnter : undefined}
-                  onMouseLeave={link.subLinks ? handleMouseLeave : undefined}
-                >
-                  <Link href={link.route} replace>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={
-                        link.label === "Gallery"
-                          ? handleGalleryClick
-                          : undefined
-                      }
-                    >
-                      {link.label}
-                    </Button>
-                  </Link>
-                  {link.subLinks &&
-                    showGalleryOptions &&
-                    link.label === "Gallery" && (
-                      <div className="flex flex-col items-start absolute top-full left-0 bg-black p-2 max-h-[300px] text-white z-50">
-                        {link.subLinks.map((subLink, subIndex) => (
-                          <Link key={subIndex} href={subLink.route}>
-                            <Button size="subNavSheet" variant="ghost">
-                              {subLink.label}
-                            </Button>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                </li>
-              ))}
-            </ul>
-            <LanguageChanger />
+            <div className="md:flex flex flex-col items-center justify-center gap-4 p-0">
+              <Link href="/">
+                <Button size="navigation" variant="navigation">
+                  {t("home")}
+                </Button>
+              </Link>
+              <div className="relative">
+                <Link href="#">
+                  <Button
+                    size="navigation"
+                    variant="navigation"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {t("gallery")}
+                  </Button>
+                </Link>
+                {showGalleryOptions && (
+                  <div
+                    className="flex flex-col items-start absolute top-full left-0 bg-black p-1 max-h-[180px] rounded-sm text-white"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Link href="/gallery/wooden-boats">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
+                      >
+                        {t("wooden")}
+                      </Button>
+                    </Link>
+                    <Link href="/gallery/fish">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
+                      >
+                        {t("fish")}
+                      </Button>
+                    </Link>
+                    <Link href="/gallery/rest">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
+                      >
+                        {t("other")}
+                      </Button>
+                    </Link>
+                    <Link href="/gallery/all">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
+                      >
+                        {t("all")}
+                      </Button>
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <Link href="/blog">
+                <Button size="navigation" variant="navigation">
+                  {t("blog")}
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button size="navigation" variant="navigation">
+                  {t("contact")}
+                </Button>
+              </Link>
+              <div className="mt-12">
+                <LanguageChanger />
+              </div>
+            </div>
           </SheetContent>
         </Sheet>
       </div>

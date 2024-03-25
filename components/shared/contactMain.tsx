@@ -39,7 +39,7 @@ export default async function Contact({
             alt="Slika1"
             width={200}
             height={100}
-            className="mt-2"
+            className="my-2"
           />
         </div>
 
@@ -84,13 +84,13 @@ export default async function Contact({
             </div>
           </div>
         </section>
-        <div className="ml-8 absolute top-96 left-[45%] z-0 hidden md:block lg:fixed">
+        <div className="ml-8 absolute top-96 left-[45%] z-0 hidden md:block overflow-hidden">
           <Image
             src="/karta.png"
             alt="Karta"
             width={750}
             height={450}
-            className=" border-none mt-10 max-w-full md:ml-8 2xl:w-[850px] 2xl:h-[750px] 2xl:mt-0 object-cover"
+            className=" border-none mt-10 max-w-full md:ml-8 2xl:w-[850px] 2xl:h-[750px] 2xl:mt-0  object-scale-down"
           />
         </div>
       </div>
