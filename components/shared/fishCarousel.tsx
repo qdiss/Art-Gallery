@@ -10,6 +10,7 @@ export default function Fish() {
   return (
     <div className="m-0 w-full">
       <Navbar />
+      <title>Edo Opanovic Fish Gallery</title>
 
       {/* Siva traka */}
       <div className="flex items-center justify-between mx-0 h-[44px] bg-[#656565]">

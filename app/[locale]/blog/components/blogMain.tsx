@@ -13,6 +13,7 @@ export default async function Blog({
 }) {
   return (
     <div className="relative bg-black text-white">
+      <title>Edo Opanovic Blog</title>
       <div className="fixed top-0 left-0 w-full z-50">
         <Navigation params={{ locale }} />
         <div className="flex items-center justify-between mx-0 h-[45px] bg-[#656565]">

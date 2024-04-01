@@ -163,8 +163,16 @@ const CarouselThree = (): JSX.Element => {
                         <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
                           Mail:{" "}
                           <strong>
-                            <Link href="mailto:edo.opanovic@gmail.com">
-                              edo.opanovic@gmail.com
+                            <Link href="mailto:info@dalmatinske-vizure.com">
+                              info@dalmatinske-vizure.com
+                            </Link>
+                          </strong>
+                        </p>
+                        <p className="mb-2 w-full lg:mb-1 2xl:ml-[-20px] text-sm 2xl:text-xl">
+                          Mail:{" "}
+                          <strong>
+                            <Link href="mailto:info@dalmatinske-vizure.com">
+                              info@fine-art-of-dalmatia.com
                             </Link>
                           </strong>
                         </p>

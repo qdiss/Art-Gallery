@@ -9,6 +9,7 @@ export default function Rest() {
   const { t } = useTranslation("common");
   return (
     <div className="m-0 w-full z-20">
+      <title>Edo Opanovic All Other Gallery</title>
       <Navbar />
 
       {/* Siva traka */}

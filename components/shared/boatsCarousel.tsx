@@ -35,6 +35,7 @@ export default function WoodenBoats() {
 
   return (
     <div className="m-0 w-full">
+      <title>Edo Opanovic Wooden Boats</title>
       <Navbar />
       {/* Siva traka */}
       <div className="flex items-center justify-between mx-0 h-[44px] bg-[#656565]">

@@ -12,6 +12,7 @@ export default function BestWork() {
   const { t } = useTranslation();
   return (
     <div className="mx-auto flex flex-col bg-black w-full h-full lg:w-screen text-white">
+      <title>Edo Opanovic Best Work</title>
       <NavbarWork />
       <div className="flex flex-col lg:flex-row items-center justify-between mt-8">
         <Image

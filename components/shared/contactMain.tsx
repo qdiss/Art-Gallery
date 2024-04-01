@@ -15,6 +15,7 @@ export default async function Contact({
   const { t, resources } = await initTranslations(locale, ["contact"]);
   return (
     <section className="bg-black h-full">
+      <title>Contact Edo Opanovic</title>
       <div className="w-full h-full bg-black text-white relative">
         <Navigation params={{ locale }} />
 
@@ -64,21 +65,28 @@ export default async function Contact({
                   <p>{t("contact:address")}</p>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <p>{t("contact:phone")}</p>
+                  <Mail className="w-5 h-5" />
+                  <p>Email:</p>
+                  <Link href="mailto: info@fine-art-of-dalmatia.com">
+                    info@fine-art-of-dalmatia.com
+                  </Link>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5" />
                   <p>
                     E-mail:{" "}
-                    <Link href="mailto:edo.opanovic@gmail.com">
-                      edo.opanovic@gmail.com
+                    <Link href="mailto:info@dalmatinske-vizure.com">
+                      info@dalmatinske-vizure.com
                     </Link>
                   </p>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Globe className="w-5 h-5" />
-                  <p>Web: edo-opannovic.hr</p>
+                  <p>Web: dalmatinske-vizure.com</p>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <Globe className="w-5 h-5" />
+                  <p>Web: fine-art-of-dalmatia.com</p>
                 </div>
               </div>
             </div>

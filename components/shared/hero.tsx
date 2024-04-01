@@ -36,6 +36,7 @@ export default function MainHero() {
   };
   return (
     <div className="relative font-extralight lg:fixed lg:w-screen">
+      <title>Edo Opanovic</title>
       <div className="absolute top-0 left-0 ml-10 mt-2 z-10 pt-2 flex flex-row">
         <Image
           src="/homeLogo.png"
