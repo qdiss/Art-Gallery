@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Image from "next/image";
@@ -12,20 +12,41 @@ interface ImageInfo {
   name: string;
   width: number;
   height: number;
+  xl: {
+    width: number;
+    height: number;
+  };
 }
 
 const CarouselSix = (): JSX.Element => {
   const { t } = useTranslation("common");
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const imageInfoArray: ImageInfo[] = [
     {
-      src: "/19.jpg",
+      src: "/19.webp",
       date: "September 2023",
       name: "batana",
-
-      width: 600,
+      width: 500,
       height: 280,
+      xl: { width: 1000, height: 600 },
+    },
+    {
+      src: "/21.webp",
+      date: "August 2022",
+      name: "samoća",
+      width: 380,
+      height: 280,
+      xl: { width: 950, height: 600 },
+    },
+    {
+      src: "/20.webp",
+      date: "May 2023",
+      name: "povratak",
+      width: 400,
+      height: 300,
+      xl: { width: 900, height: 600 },
     },
   ];
 
@@ -37,31 +58,57 @@ const CarouselSix = (): JSX.Element => {
     setFullscreenImage(null);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Postavi početnu vrijednost za širinu ekrana
+    setWindowWidth(window.innerWidth);
+
+    // Dodaj slušač za promjenu veličine ekrana
+    window.addEventListener("resize", handleResize);
+
+    // Ukloni slušač kada komponenta prestane biti montirana
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="relative lg:fixed">
       <img
         src="/podloga1.webp"
         alt="Podloga"
-        className="object-cover w-full lg:block hidden"
+        className="object-contain w-full lg:block hidden"
         height={720}
         width={1920}
       />
-      <div className="flex flex-col items-center justify-center absolute top-0 left-0 right-0 mx-20 gap-x-8 lg:flex-row overflow-y-hidden">
+      <div className="flex flex-col items-center justify-between absolute top-0 left-0 right-0 mx-20 gap-x-8 lg:flex-row overflow-y-hidden">
         {imageInfoArray.map((imageInfo, index) => (
           <div
             key={index}
             className={`relative ${
               index === 0 || index === imageInfoArray.length - 1
-                ? "py-11 lg:py-16"
+                ? "py-11 2xl:py-24"
                 : "pl-0"
             }`}
           >
             <Image
               src={imageInfo.src}
               alt={`Slika ${index + 1}`}
-              width={imageInfo.width}
-              height={imageInfo.height}
-              className="object-cover cursor-pointer drop-shadow-2xl shadow-black"
+              width={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.width
+                  : imageInfo.width
+              }
+              height={
+                windowWidth > 1536 && imageInfo.xl
+                  ? imageInfo.xl.height
+                  : imageInfo.height
+              }
+              className={
+                "object-cover cursor-pointer drop-shadow-2xl shadow-black"
+              }
               onClick={() => openFullscreen(imageInfo.src)}
               onContextMenu={(e) => e.preventDefault()}
             />

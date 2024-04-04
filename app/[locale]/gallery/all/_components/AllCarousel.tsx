@@ -13,6 +13,7 @@ import FishCarouselOne from "@/app/[locale]/gallery/fish/_components/fishCarouse
 import OtherCarouselOne from "@/app/[locale]/gallery/rest/_components/otherCarouselOne";
 
 import { useTranslation } from "react-i18next";
+import OtherCarouselTwo from "../../rest/_components/otherCarouselTwo";
 
 export default function AllCarousel() {
   const { t } = useTranslation("common");
@@ -30,14 +31,16 @@ export default function AllCarousel() {
         fishCarouselOne:
           direction === "left" ? "carouselSix" : "otherCarouselOne",
         otherCarouselOne:
-          direction === "left" ? "fishCarouselOne" : "otherCarouselOne",
+          direction === "left" ? "fishCarouselOne" : "otherCarouselTwo",
+        otherCarouselTwo:
+          direction === "left" ? "otherCarouselOne" : "carouselOne",
       };
       return carouselMap[prevActive];
     });
   };
 
   const showArrowLeft: boolean = activeCarousel !== "carouselOne";
-  const showArrowRight: boolean = activeCarousel !== "otherCarouselOne"; // Change here to check if it's carouselSix instead of carouselFive
+  const showArrowRight: boolean = activeCarousel !== "otherCarouseTwo"; // Change here to check if it's carouselSix instead of carouselFive
 
   return (
     <div className="m-0 w-full">
@@ -74,6 +77,7 @@ export default function AllCarousel() {
         {activeCarousel === "carouselSix" && <CarouselSix />}
         {activeCarousel === "fishCarouselOne" && <FishCarouselOne />}
         {activeCarousel === "otherCarouselOne" && <OtherCarouselOne />}
+        {activeCarousel === "otherCarouselTwo" && <OtherCarouselTwo />}
       </div>
     </div>
   );

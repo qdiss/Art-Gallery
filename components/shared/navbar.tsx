@@ -42,7 +42,7 @@ export default function Navbar() {
         </Link>
         <Link href="/">
           <div className="flex items-center justify-center flex-col ml-4 font-light">
-            <p className="text-2xl">Fine Art of Dalmatia</p>
+            <p className="text-2xl">{t("fineArt")}</p>
             <p className="text-lg uppercase">Digital Art</p>
           </div>
         </Link>

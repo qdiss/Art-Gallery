@@ -25,28 +25,25 @@ const CarouselThree = (): JSX.Element => {
 
   const imageInfoArray: ImageInfo[] = [
     {
-      src: "/7.webp",
+      src: "/slika7.webp",
       date: "July 2022",
       name: "đir po moru",
-
       width: 470,
       height: 210,
       xl: { width: 700, height: 400 },
     },
     {
-      src: "/8.webp",
+      src: "/slika8.webp",
       date: "April 2023",
       name: "falkuša",
-
       width: 550,
       height: 200,
       xl: { width: 920, height: 500 },
     },
     {
-      src: "/9.webp",
+      src: "/slika9.webp",
       date: "September 2022",
       name: "zalazak sunca",
-
       width: 470,
       height: 200,
       xl: { width: 670, height: 400 },

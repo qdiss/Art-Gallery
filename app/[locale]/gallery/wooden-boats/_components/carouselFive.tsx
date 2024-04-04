@@ -18,14 +18,14 @@ interface ImageInfo {
   };
 }
 
-const CarouselFour = (): JSX.Element => {
+const CarouselFive = (): JSX.Element => {
   const { t } = useTranslation("common");
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
   const [windowWidth, setWindowWidth] = useState<number>(0);
 
   const imageInfoArray: ImageInfo[] = [
     {
-      src: "/13.jpg",
+      src: "/13.webp",
       date: "October 2023",
       name: "život je lijep",
       width: 500,
@@ -186,4 +186,4 @@ const CarouselFour = (): JSX.Element => {
   );
 };
 
-export default CarouselFour;
+export default CarouselFive;

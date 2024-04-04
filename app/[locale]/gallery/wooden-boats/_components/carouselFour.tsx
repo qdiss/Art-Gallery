@@ -28,8 +28,7 @@ const CarouselFour = (): JSX.Element => {
       src: "/10.webp",
       date: "August 2020",
       name: "pasara s Vrgade",
-
-      width: 390,
+      width: 340,
       height: 280,
       xl: { width: 500, height: 400 },
     },
@@ -37,8 +36,7 @@ const CarouselFour = (): JSX.Element => {
       src: "/11.webp",
       date: "March 2021",
       name: "na škveru",
-
-      width: 530,
+      width: 600,
       height: 400,
       xl: { width: 680, height: 600 },
     },
@@ -46,8 +44,7 @@ const CarouselFour = (): JSX.Element => {
       src: "/12.webp",
       date: "June 2023",
       name: "jugo",
-
-      width: 380,
+      width: 390,
       height: 200,
       xl: { width: 490, height: 400 },
     },
