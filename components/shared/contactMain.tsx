@@ -34,27 +34,17 @@ export default async function Contact({
             alt="Traka"
             className="mx-auto w-[30%] md:w-[14%]"
           />
-
-          <Image
-            src="/slika1.webp"
-            alt="Slika1"
-            width={200}
-            height={100}
-            className="my-2"
-          />
         </div>
 
         <section className="bg-black flex items-center justify-between flex-col md:flex-row">
-          <div className="md:w-1/2 md:mr-8 max-w-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5746.102256998282!2d15.444977801147939!3d43.937615505440284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1334cacff9152fc7%3A0x8d6a7b4b2ff116bd!2sTown%20of%20Biograd!5e0!3m2!1sen!2sba!4v1707429486738!5m2!1sen!2sba"
-              width="650"
-              height="400"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="border-none mt-10 max-w-full md:ml-8 2xl:w-[750px] 2xl:h-[450px] 2xl:mt-0"
-            ></iframe>
+          <div className="md:w-1/2 md:mr-8 max-w-full ">
+            <Image
+              src="/edo.svg"
+              alt="Edo Opanovic"
+              width={450}
+              height={400}
+              className=" border-none max-w-full md:ml-32"
+            />
           </div>
           <div className="md:w-1/2 md:ml-8 z-10">
             <div className="flex flex-col items-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
@@ -92,13 +82,13 @@ export default async function Contact({
             </div>
           </div>
         </section>
-        <div className="ml-8 absolute top-96 left-[45%] z-0 hidden md:block overflow-hidden">
+        <div className="ml-8 absolute top-[150px] left-[45%] z-0 hidden md:block overflow-hidden">
           <Image
-            src="/karta.png"
+            src="/karta.svg"
             alt="Karta"
             width={750}
             height={450}
-            className=" border-none mt-10 max-w-full md:ml-8 2xl:w-[850px] 2xl:h-[750px] 2xl:mt-0  object-scale-down"
+            className=" border-none mt-10 max-w-full md:ml-8 2xl:mt-0  object-scale-down"
           />
         </div>
       </div>

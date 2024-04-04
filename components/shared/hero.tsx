@@ -37,15 +37,18 @@ export default function MainHero() {
   return (
     <div className="relative font-extralight lg:fixed lg:w-screen">
       <title>Edo Opanovic</title>
-      <div className="absolute top-0 left-0 ml-10 mt-2 z-10 pt-2 flex flex-row">
+      <div className="absolute top-0 left-0 ml-10 z-10 pt-2 flex flex-row items-center">
         <Image
-          src="/homeLogo.png"
+          src="/logo.png"
           alt="logo"
-          width={300}
-          height={140}
+          width={50}
+          height={50}
           loading="eager"
-          className="w-[200px] md:w-[400px] md:object-contain"
         />
+        <div className="ml-2 flex items-center justify-center flex-col">
+          <p className="font-light text-3xl">{t("fineArt")}</p>
+          <p className="text-2xl font-light">Digital Art</p>
+        </div>
       </div>
 
       {/* Mobile Menu Icon */}

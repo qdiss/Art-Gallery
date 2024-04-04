@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "./navbar";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { navbarLink } from "@/constants";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import LanguageChanger from "./LanguageChanger";
 
@@ -16,11 +14,11 @@ export default function BestWork() {
       <NavbarWork />
       <div className="flex flex-col lg:flex-row items-center justify-between mt-8">
         <Image
-          src="/10.webp"
+          src="/bestWork/bestWork1.webp"
           alt="Wooden Boat"
           width={400}
           height={300}
-          className="2xl:w-[500px] 2xl:h-[580px] w-[400px] h-[480px] object-cover pt-2 hidden lg:block mr-0 ml-20"
+          className="object-cover pt-2 hidden lg:block mr-0 ml-20"
         />
         <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-2">
           <div className="flex items-center justify-center flex-col">
@@ -33,7 +31,7 @@ export default function BestWork() {
               className="flex items-center justify-center mt-2 lg:mb-4"
             />
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 w-fit gap-2">
+          <div className="flex flex-wrap justify-center gap-3">
             <Image
               src="/10.webp"
               alt="11"
@@ -42,46 +40,46 @@ export default function BestWork() {
               className="h-[200px] mt-4 lg:hidden"
             />
             <Image
-              src="/14.webp"
-              alt="11"
-              width={240}
-              height={500}
-              className="h-[200px] object-cover w-full"
-            />
-            <Image
-              src="/riba2.webp"
+              src="/bestWork/bestWork2.webp"
               alt="12"
-              width={280}
+              width={300}
               height={500}
               className="h-[200px]"
             />
             <Image
-              src="/slika2.webp"
-              alt="13"
-              width={240}
-              height={500}
-              className="h-[200px] object-cover "
-            />
-            <Image
-              src="/slika5.webp"
+              src="/bestWork/bestWork3.webp"
               alt="11"
-              width={240}
-              height={500}
+              width={200}
+              height={200}
               className="h-[200px]"
             />
             <Image
-              src="/11.webp"
-              alt="12"
-              width={280}
-              height={500}
-              className="h-[200px]"
-            />
-            <Image
-              src="/8.webp"
+              src="/bestWork/bestWork4.webp"
               alt="13"
-              width={240}
+              width={300}
               height={500}
-              className="h-[200px] object-cover mb-6 lg:mb-0"
+              className="h-[200px]"
+            />
+            <Image
+              src="/bestWork/bestWork5.webp"
+              alt="11"
+              width={300}
+              height={500}
+              className="h-[200px]"
+            />
+            <Image
+              src="/bestWork/bestWork6.webp"
+              alt="12"
+              width={200}
+              height={500}
+              className="h-[200px]"
+            />
+            <Image
+              src="/bestWork/bestWork7.webp"
+              alt="13"
+              width={300}
+              height={500}
+              className="h-[200px]"
             />
           </div>
         </div>
