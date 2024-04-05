@@ -30,7 +30,7 @@ const CarouselFour = (): JSX.Element => {
       name: "pasara s Vrgade",
       width: 340,
       height: 280,
-      xl: { width: 500, height: 400 },
+      xl: { width: 390, height: 400 },
     },
     {
       src: "/11.webp",
@@ -46,7 +46,7 @@ const CarouselFour = (): JSX.Element => {
       name: "jugo",
       width: 390,
       height: 200,
-      xl: { width: 490, height: 400 },
+      xl: { width: 446, height: 400 },
     },
   ];
 
@@ -90,7 +90,7 @@ const CarouselFour = (): JSX.Element => {
             key={index}
             className={`relative ${
               index === 0 || index === imageInfoArray.length - 1
-                ? "py-11 lg:py-16"
+                ? "py-11 lg:py-12"
                 : "pl-0"
             }`}
           >
