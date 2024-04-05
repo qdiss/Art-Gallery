@@ -30,7 +30,7 @@ const OtherCarouselTwo = (): JSX.Element => {
       name: "mriža",
       width: 360,
       height: 330,
-      xl: { width: 600, height: 400 },
+      xl: { width: 440, height: 400 },
     },
     {
       src: "/ostalo5.webp",
@@ -38,7 +38,7 @@ const OtherCarouselTwo = (): JSX.Element => {
       name: "bunja",
       width: 640,
       height: 250,
-      xl: { width: 650, height: 350 },
+      xl: { width: 760, height: 350 },
     },
     {
       src: "/ostalo6.webp",
@@ -46,7 +46,7 @@ const OtherCarouselTwo = (): JSX.Element => {
       name: "rigani i šuvari",
       width: 416,
       height: 330,
-      xl: { width: 1000, height: 400 },
+      xl: { width: 500, height: 400 },
     },
   ];
 
@@ -108,7 +108,7 @@ const OtherCarouselTwo = (): JSX.Element => {
                   : imageInfo.height
               }
               className={
-                "object-cover cursor-pointer drop-shadow-2xl shadow-black 2xl"
+                "object-cover cursor-pointer drop-shadow-2xl shadow-black"
               }
               onClick={() => openFullscreen(imageInfo.src)}
               onContextMenu={(e) => e.preventDefault()}
