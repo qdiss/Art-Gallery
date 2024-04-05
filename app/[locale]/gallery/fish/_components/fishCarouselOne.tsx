@@ -27,7 +27,7 @@ const FishCarouselOne = (): JSX.Element => {
     {
       src: "/riba1.webp",
       date: "February 2020",
-      name: "trlji",
+      name: "trlje",
 
       width: 454,
       height: 330,
@@ -37,7 +37,6 @@ const FishCarouselOne = (): JSX.Element => {
       src: "/riba2.webp",
       date: "April 2023",
       name: "lokarda",
-
       width: 674,
       height: 400,
       xl: { width: 1040, height: 600 },
@@ -45,8 +44,7 @@ const FishCarouselOne = (): JSX.Element => {
     {
       src: "/riba3.webp",
       date: "July 2021",
-      name: "sdrela",
-
+      name: "orada",
       width: 400,
       height: 250,
       xl: { width: 610, height: 350 },

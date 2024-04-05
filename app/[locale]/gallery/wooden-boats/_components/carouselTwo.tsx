@@ -28,7 +28,6 @@ const CarouselTwo = (): JSX.Element => {
       src: "/slika4.webp",
       date: "October 2020",
       name: "regata",
-
       width: 485,
       height: 330,
       xl: { width: 780, height: 400 },
@@ -37,7 +36,6 @@ const CarouselTwo = (): JSX.Element => {
       src: "/slika5.webp",
       date: "June 2022",
       name: "na valu",
-
       width: 370,
       height: 250,
       xl: { width: 590, height: 350 },
@@ -46,7 +44,6 @@ const CarouselTwo = (): JSX.Element => {
       src: "/slika6.webp",
       date: "July 2023",
       name: "vitar u krmu",
-
       width: 500,
       height: 350,
       xl: { width: 794, height: 400 },

@@ -26,7 +26,7 @@ export default async function Contact({
         </div>
 
         <div className="w-full flex items-center justify-center flex-col">
-          <h1 className="font-normal text-white text-center mt-10 text-4xl">
+          <h1 className="font-normal text-white text-center mt-10 text-4xl uppercase">
             {t("contact:contact")}
           </h1>
           <img
@@ -48,7 +48,9 @@ export default async function Contact({
           </div>
           <div className="md:w-1/2 md:ml-8 z-10">
             <div className="flex flex-col items-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
-              <h1 className="font-bold text-4xl">{t("contact:artist")}</h1>
+              <h1 className="font-normal uppercase text-4xl">
+                {t("contact:artist")}
+              </h1>
               <div className="flex flex-col items-start justify-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5" />
@@ -70,25 +72,15 @@ export default async function Contact({
                     </Link>
                   </p>
                 </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <Globe className="w-5 h-5" />
-                  <p>Web: dalmatinske-vizure.com</p>
-                </div>
-                <div className="flex items-center justify-center space-x-2">
-                  <Globe className="w-5 h-5" />
-                  <p>Web: fine-art-of-dalmatia.com</p>
-                </div>
               </div>
             </div>
           </div>
         </section>
         <div className="ml-8 absolute top-[150px] left-[45%] z-0 hidden md:block overflow-hidden">
-          <Image
+          <img
             src="/karta.svg"
             alt="Karta"
-            width={750}
-            height={450}
-            className=" border-none mt-10 max-w-full md:ml-8 2xl:mt-0  object-scale-down"
+            className="border-none mt-10 w-[1000px] md:ml-8 2xl:mt-0 "
           />
         </div>
       </div>

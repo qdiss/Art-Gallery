@@ -35,7 +35,7 @@ export default function CarouselOne() {
     {
       src: "/slika2.webp",
       date: "September 2021",
-      name: "latisnko idro",
+      name: "atinsko idro",
       width: 820,
       height: 400,
       xl: { width: 820, height: 400 },
@@ -43,7 +43,7 @@ export default function CarouselOne() {
     {
       src: "/slika3.webp",
       date: "October 2021",
-      name: "artijja",
+      name: "artija",
       width: 350,
       height: 200,
       xl: { width: 400, height: 350 },
