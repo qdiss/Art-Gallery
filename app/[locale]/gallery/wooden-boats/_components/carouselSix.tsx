@@ -38,7 +38,7 @@ const CarouselSix = (): JSX.Element => {
       name: "samoća",
       width: 380,
       height: 280,
-      xl: { width: 950, height: 600 },
+      xl: { width: 800, height: 600 },
     },
     {
       src: "/20.webp",
@@ -46,7 +46,7 @@ const CarouselSix = (): JSX.Element => {
       name: "povratak",
       width: 400,
       height: 300,
-      xl: { width: 900, height: 600 },
+      xl: { width: 800, height: 600 },
     },
   ];
 

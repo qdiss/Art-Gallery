@@ -20,7 +20,7 @@ export default function BestWork() {
           height={300}
           className="object-cover pt-2 hidden lg:block mr-0 ml-20"
         />
-        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-2">
+        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-10">
           <div className="flex items-center justify-center flex-col">
             <h1 className="uppercase font-light mt-9">{t("header")}</h1>
             <Image
@@ -31,56 +31,60 @@ export default function BestWork() {
               className="flex items-center justify-center mt-2 lg:mb-4"
             />
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Image
-              src="/10.webp"
-              alt="11"
-              width={280}
-              height={500}
-              className="h-[200px] mt-4 lg:hidden"
-            />
-            <Image
-              src="/bestWork/bestWork2.webp"
-              alt="12"
-              width={300}
-              height={500}
-              className="h-[200px]"
-            />
-            <Image
-              src="/bestWork/bestWork3.webp"
-              alt="11"
-              width={200}
-              height={200}
-              className="h-[200px]"
-            />
-            <Image
-              src="/bestWork/bestWork4.webp"
-              alt="13"
-              width={300}
-              height={500}
-              className="h-[200px]"
-            />
-            <Image
-              src="/bestWork/bestWork5.webp"
-              alt="11"
-              width={300}
-              height={500}
-              className="h-[200px]"
-            />
-            <Image
-              src="/bestWork/bestWork6.webp"
-              alt="12"
-              width={200}
-              height={500}
-              className="h-[200px]"
-            />
-            <Image
-              src="/bestWork/bestWork7.webp"
-              alt="13"
-              width={300}
-              height={500}
-              className="h-[200px]"
-            />
+          <div className="flex items-center flex-col justify-center space-y-3">
+            <div className="flex flex-row gap-x-3">
+              <Image
+                src="/10.webp"
+                alt="11"
+                width={280}
+                height={500}
+                className="h-[200px] mt-4 lg:hidden"
+              />
+              <Image
+                src="/bestWork/bestWork2.webp"
+                alt="12"
+                width={300}
+                height={500}
+                className="h-[200px]"
+              />
+              <Image
+                src="/bestWork/bestWork3.webp"
+                alt="11"
+                width={200}
+                height={200}
+                className="h-[200px]"
+              />
+              <Image
+                src="/bestWork/bestWork4.webp"
+                alt="13"
+                width={300}
+                height={500}
+                className="h-[200px]"
+              />
+            </div>
+            <div className="flex flex-row gap-x-3">
+              <Image
+                src="/bestWork/bestWork5.webp"
+                alt="11"
+                width={300}
+                height={500}
+                className="h-[200px]"
+              />
+              <Image
+                src="/bestWork/bestWork6.webp"
+                alt="12"
+                width={200}
+                height={500}
+                className="h-[200px]"
+              />
+              <Image
+                src="/bestWork/bestWork7.webp"
+                alt="13"
+                width={300}
+                height={500}
+                className="h-[200px]"
+              />
+            </div>
           </div>
         </div>
       </div>
