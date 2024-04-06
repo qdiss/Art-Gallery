@@ -64,102 +64,98 @@ export default function MainHero() {
               onClick={toggleSidebar}
             />
           </SheetTrigger>
-          <SheetContent className="max-w-52 bg-black text-white">
-            <ul className="md:flex flex flex-col items-center justify-center gap-4 p-0">
-              <nav className="lg:flex items-center justify-between absolute top-0 right-0 mr-20 mt-2 z-10 text-3xl hidden">
-                <LanguageChanger />
-                <div className="flex flex-row items-center justify-center space-x-4">
-                  <Link href="/">
-                    <Button
-                      size="custom"
-                      variant="ghost"
-                      className="hover:bg-inherit"
-                    >
-                      {t("home")}
-                    </Button>
-                  </Link>
+          <SheetContent className="w-52 bg-black text-white">
+            <div className="md:flex flex flex-col items-center justify-center gap-4 p-0">
+              <Link href="/">
+                <Button
+                  size="navigation"
+                  variant="navigation"
+                  className="hover:bg-inherit"
+                >
+                  {t("home")}
+                </Button>
+              </Link>
 
-                  <div className="relative">
-                    <Link href="#">
+              <div className="relative">
+                <Link href="#">
+                  <Button
+                    size="navigation"
+                    variant="navigation"
+                    className="hover:bg-inherit"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {t("gallery")}
+                  </Button>
+                </Link>
+                {showGalleryOptions && (
+                  <div
+                    className="flex flex-col items-start absolute top-full left-0 bg-black text-white p-1 max-h-[180px] rounded-sm"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Link href="/gallery/wooden-boats">
                       <Button
-                        size="custom"
-                        variant="ghost"
-                        className="hover:bg-inherit"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
                       >
-                        {t("gallery")}
+                        {t("wooden")}
                       </Button>
                     </Link>
-                    {showGalleryOptions && (
-                      <div
-                        className="flex flex-col items-start absolute top-full left-0 bg-white p-1 max-h-[180px] rounded-sm"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                    <Link href="/gallery/fish">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
                       >
-                        <Link href="/gallery/wooden-boats">
-                          <Button
-                            size="subNav"
-                            variant="ghost"
-                            onClick={handleOptionClick}
-                          >
-                            {t("wooden")}
-                          </Button>
-                        </Link>
-                        <Link href="/gallery/fish">
-                          <Button
-                            size="subNav"
-                            variant="ghost"
-                            onClick={handleOptionClick}
-                          >
-                            {t("fish")}
-                          </Button>
-                        </Link>
-                        <Link href="/gallery/rest">
-                          <Button
-                            size="subNav"
-                            variant="ghost"
-                            onClick={handleOptionClick}
-                          >
-                            {t("other")}
-                          </Button>
-                        </Link>
-                        <Link href="/gallery/all">
-                          <Button
-                            size="subNav"
-                            variant="ghost"
-                            onClick={handleOptionClick}
-                          >
-                            {t("all")}
-                          </Button>
-                        </Link>
-                      </div>
-                    )}
+                        {t("fish")}
+                      </Button>
+                    </Link>
+                    <Link href="/gallery/rest">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
+                      >
+                        {t("other")}
+                      </Button>
+                    </Link>
+                    <Link href="/gallery/all">
+                      <Button
+                        size="subNav"
+                        variant="navigation"
+                        onClick={handleOptionClick}
+                      >
+                        {t("all")}
+                      </Button>
+                    </Link>
                   </div>
+                )}
+              </div>
 
-                  <Link href="/blog">
-                    <Button
-                      size="custom"
-                      variant="ghost"
-                      className="hover:bg-inherit"
-                    >
-                      {t("blog")}
-                    </Button>
-                  </Link>
+              <Link href="/blog">
+                <Button
+                  size="navigation"
+                  variant="navigation"
+                  className="hover:bg-inherit"
+                >
+                  {t("blog")}
+                </Button>
+              </Link>
 
-                  <Link href="/contact">
-                    <Button
-                      size="custom"
-                      variant="ghost"
-                      className="hover:bg-inherit"
-                    >
-                      {t("contact")}
-                    </Button>
-                  </Link>
-                </div>
-              </nav>
-            </ul>
-            <div className="flex items-center justify-center mt-4">
+              <Link href="/contact">
+                <Button
+                  size="navigation"
+                  variant="navigation"
+                  className="hover:bg-inherit"
+                >
+                  {t("contact")}
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex items-center justify-center mt-12">
               <LanguageChanger />
             </div>
           </SheetContent>
@@ -257,5 +253,3 @@ export default function MainHero() {
     </div>
   );
 }
-
-//TODO NAPRAVITI ZA MainHero I POSEBNO DODATI USE TRANSLATIONS

@@ -12,15 +12,15 @@ export default function BestWork() {
     <div className="mx-auto flex flex-col bg-black w-full h-full lg:w-screen text-white">
       <title>Edo Opanovic Best Work</title>
       <NavbarWork />
-      <div className="flex flex-col lg:flex-row items-center justify-between mt-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between mt-4">
         <Image
           src="/bestWork/bestWork1.webp"
           alt="Wooden Boat"
-          width={400}
-          height={300}
+          width={430}
+          height={350}
           className="object-cover pt-2 hidden lg:block mr-0 ml-20"
         />
-        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-10">
+        <div className="flex flex-col items-center justify-center text-2xl text-white lg:text-4xl mr-20">
           <div className="flex items-center justify-center flex-col">
             <h1 className="uppercase font-light mt-9">{t("header")}</h1>
             <Image
@@ -32,13 +32,13 @@ export default function BestWork() {
             />
           </div>
           <div className="flex items-center flex-col justify-center space-y-3">
-            <div className="flex flex-row gap-x-3">
+            <div className="flex flex-col items-center justify-center space-y-3 lg:flex-row gap-x-0 lg:gap-x-3">
               <Image
                 src="/10.webp"
                 alt="11"
                 width={280}
                 height={500}
-                className="h-[200px] mt-4 lg:hidden"
+                className="h-[300px] lg:h-[200px] mt-4 lg:hidden"
               />
               <Image
                 src="/bestWork/bestWork2.webp"
@@ -62,7 +62,7 @@ export default function BestWork() {
                 className="h-[200px]"
               />
             </div>
-            <div className="flex flex-row gap-x-3">
+            <div className="flex flex-col items-center justify-center space-y-3 lg:space-y-0 lg:flex-row gap-x-3">
               <Image
                 src="/bestWork/bestWork5.webp"
                 alt="11"
@@ -125,7 +125,7 @@ export function NavbarWork() {
         </Link>
         <Link href="/">
           <div className="flex items-center justify-center flex-col ml-4 font-light">
-            <p className="text-2xl">Fine Art of Dalmatia</p>
+            <p className="text-2xl">{t("fineArt")}</p>
             <p className="text-lg uppercase">Digital Art</p>
           </div>
         </Link>
