@@ -1,5 +1,7 @@
 {
-  "address": "Adresa: Ivana Gorana Kovacica 16 23210 Biograd na moru, Hrvatska",
+  "address": "Adresa: Ivana Gorana Kovacica 16",
+  "address2": "23210 Biograd na moru",
+  "address3": "Hrvatska",
   "artist": "Autor",
   "contact": "Kontakt",
   "phone": "Telefon: 00 385 95 8177 259"

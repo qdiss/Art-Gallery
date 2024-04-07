@@ -6,7 +6,7 @@ import { Transition } from "@headlessui/react";
 import MainHero from "./hero";
 
 export default function Carousel() {
-  const [activeCarousel, setActiveCarousel] = useState<string>("hero");
+  const [activeCarousel, setActiveCarousel] = useState<string>("bestWork");
 
   // useEffect(() => {
   //   const interval = setInterval(() => {

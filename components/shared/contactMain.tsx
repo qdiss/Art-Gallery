@@ -15,7 +15,7 @@ export default async function Contact({
 }) {
   const { t, resources } = await initTranslations(locale, ["contact"]);
   return (
-    <section className="bg-black h-full">
+    <section className="bg-black h-full font-normal">
       <title>Contact Edo Opanovic</title>
       <div className="w-full h-full bg-black text-white relative">
         <Navigation params={{ locale }} />
@@ -27,7 +27,7 @@ export default async function Contact({
         </div>
 
         <div className="w-full flex items-center justify-center flex-col">
-          <h1 className="font-normal text-white text-center mt-10 text-4xl uppercase">
+          <h1 className="font-light text-white text-center mt-10 text-4xl uppercase">
             {t("contact:contact")}
           </h1>
           <img
@@ -47,9 +47,9 @@ export default async function Contact({
               className=" border-none max-w-full md:ml-32"
             />
           </div>
-          <div className="md:w-1/2 md:ml-8 z-10">
+          <div className="md:w-[64%] md:ml-8 z-10">
             <div className="flex flex-col items-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
-              <h1 className="font-normal uppercase text-4xl">
+              <h1 className="font-light uppercase text-4xl">
                 {t("contact:artist")}
               </h1>
               <div className="flex flex-col items-start justify-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
@@ -57,8 +57,14 @@ export default async function Contact({
                   <p className="uppercase">Edo Opanovic</p>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <MapPin className="w-5 h-5" />
-                  <p>{t("contact:address")}</p>
+                  <div>
+                    <div className="flex flex-row items-center justify-center">
+                      <MapPin className="w-5 h-5 mr-2" />
+                      <p>{t("contact:address")}</p>
+                    </div>
+                    <p className="ml-7">{t("contact:address2")}</p>
+                    <p className="ml-7">{t("contact:address3")}</p>
+                  </div>
                 </div>
 
                 <div className="flex items-center justify-center space-x-2">
@@ -81,11 +87,11 @@ export default async function Contact({
             </div>
           </div>
         </section>
-        <div className="ml-8 absolute top-[200px] left-[55%] z-0 hidden md:block overflow-hidden">
+        <div className="ml-8 absolute top-[100px] left-[45%] z-0 hidden md:block overflow-hidden">
           <img
             src="/karta.svg"
             alt="Karta"
-            className="border-none mt-10 w-[500px] md:ml-8 2xl:mt-0 "
+            className="border-none mt-10 w-[700px] md:ml-8 2xl:mt-0 "
           />
         </div>
       </div>
