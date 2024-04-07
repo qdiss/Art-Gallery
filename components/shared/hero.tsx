@@ -37,7 +37,7 @@ export default function MainHero() {
   return (
     <div className="relative font-extralight lg:fixed lg:w-screen">
       <title>Edo Opanovic</title>
-      <div className="absolute top-0 left-0 ml-10 z-10 pt-2 flex flex-row items-center">
+      <div className="absolute top-0 left-0 ml-0 lg:ml-10 z-10 pt-2 flex flex-row items-center">
         <Image
           src="/logo.png"
           alt="logo"
@@ -166,7 +166,11 @@ export default function MainHero() {
         <LanguageChanger />
         <div className="flex flex-row items-center justify-center space-x-4">
           <Link href="/">
-            <Button size="custom" variant="ghost" className="hover:bg-inherit">
+            <Button
+              size="custom"
+              variant="navigationHero"
+              className="hover:bg-inherit"
+            >
               {t("home")}
             </Button>
           </Link>
@@ -175,7 +179,7 @@ export default function MainHero() {
             <Link href="#">
               <Button
                 size="custom"
-                variant="ghost"
+                variant="navigationHero"
                 className="hover:bg-inherit"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -230,13 +234,21 @@ export default function MainHero() {
           </div>
 
           <Link href="/blog">
-            <Button size="custom" variant="ghost" className="hover:bg-inherit">
+            <Button
+              size="custom"
+              variant="navigationHero"
+              className="hover:bg-inherit"
+            >
               {t("blog")}
             </Button>
           </Link>
 
           <Link href="/contact">
-            <Button size="custom" variant="ghost" className="hover:bg-inherit">
+            <Button
+              size="custom"
+              variant="navigationHero"
+              className="hover:bg-inherit"
+            >
               {t("contact")}
             </Button>
           </Link>

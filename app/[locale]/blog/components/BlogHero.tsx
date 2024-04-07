@@ -12,7 +12,7 @@ export default async function BlogHero({
   const { t, resources } = await initTranslations(locale, ["blog"]);
 
   return (
-    <section className="flex items-center flex-col md:flex md:flex-row">
+    <section className="flex items-center flex-col md:flex md:flex-row mt-24 lg:mt-8">
       <div className="md:w-full md:mb-0">
         <img
           src="/ribar.png"
