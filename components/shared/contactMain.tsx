@@ -35,6 +35,9 @@ export default async function Contact({
             alt="Traka"
             className="mx-auto w-[30%] md:w-[14%]"
           />
+          <h1 className="font-light uppercase text-4xl mt-2">
+            {t("contact:artist")}
+          </h1>
         </div>
 
         <section className="bg-black flex items-center justify-between flex-col md:flex-row">
@@ -42,16 +45,13 @@ export default async function Contact({
             <Image
               src="/edo.svg"
               alt="Edo Opanovic"
-              width={500}
+              width={400}
               height={400}
               className="border-none max-w-full md:ml-24"
             />
           </div>
           <div className="md:w-[64%] md:ml-8 z-10">
             <div className="flex flex-col items-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
-              <h1 className="font-light uppercase text-4xl">
-                {t("contact:artist")}
-              </h1>
               <div className="flex flex-col items-start justify-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
                 <div className="flex items-center justify-center space-x-2">
                   <p className="uppercase">Edo Opanovic</p>
