@@ -6,6 +6,7 @@ import Image from "next/image";
 import initTranslations from "@/app/i18n";
 
 import Navigation from "@/app/[locale]/components/navigation";
+import { PersonIcon } from "@radix-ui/react-icons";
 
 export default async function Contact({
   params: { locale },
@@ -53,9 +54,13 @@ export default async function Contact({
               </h1>
               <div className="flex flex-col items-start justify-center md:items-start space-y-10 mt-8 mb-5 md:mt-0">
                 <div className="flex items-center justify-center space-x-2">
+                  <p className="uppercase">Edo Opanovic</p>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5" />
                   <p>{t("contact:address")}</p>
                 </div>
+
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5" />
                   <p>Email:</p>
@@ -76,11 +81,11 @@ export default async function Contact({
             </div>
           </div>
         </section>
-        <div className="ml-8 absolute top-[150px] left-[45%] z-0 hidden md:block overflow-hidden">
+        <div className="ml-8 absolute top-[200px] left-[55%] z-0 hidden md:block overflow-hidden">
           <img
             src="/karta.svg"
             alt="Karta"
-            className="border-none mt-10 w-[1000px] md:ml-8 2xl:mt-0 "
+            className="border-none mt-10 w-[500px] md:ml-8 2xl:mt-0 "
           />
         </div>
       </div>
