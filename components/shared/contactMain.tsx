@@ -42,9 +42,9 @@ export default async function Contact({
             <Image
               src="/edo.svg"
               alt="Edo Opanovic"
-              width={450}
+              width={500}
               height={400}
-              className=" border-none max-w-full md:ml-32"
+              className="border-none max-w-full md:ml-24"
             />
           </div>
           <div className="md:w-[64%] md:ml-8 z-10">
@@ -91,7 +91,7 @@ export default async function Contact({
           <img
             src="/karta.svg"
             alt="Karta"
-            className="border-none mt-10 w-[700px] md:ml-8 2xl:mt-0 "
+            className="border-none mt-10 w-[750px] md:ml-8 2xl:mt-0 "
           />
         </div>
       </div>
